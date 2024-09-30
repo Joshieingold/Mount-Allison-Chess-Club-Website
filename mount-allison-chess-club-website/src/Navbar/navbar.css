@@ -1,0 +1,58 @@
+.navbar {
+    height: 4.90vh;
+    width: 100vw;
+    margin: 0 0 0 0;
+    padding-top: 1rem ;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: rgb(146, 25, 49);
+
+
+}
+.logo {
+    object-fit: scale-down;
+    height: 3.5rem;
+    width: 4rem;
+    background-color: transparent;
+}
+.logoButton {
+    background: none; /* Remove default background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove outline on focus */
+}
+.DesktopMenu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+
+}
+.desktopMenuListItem {
+    margin: 1rem;
+    color: white;
+    cursor: pointer;
+    white-space:nowrap;
+    border-radius; 5px;
+    padding: 0.5rem;
+}
+
+.desktopMenuBtn {
+    background: white;
+    color: black;
+}
+
+    .desktopMenuBtn:hover {
+        opacity: 0.8;
+        transition: opacity 0.5s;
+    }
+

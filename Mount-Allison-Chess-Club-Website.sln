@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "mount-allison-chess-club-website", "Mount-Allison-Chess-Club-Website\mount-allison-chess-club-website.esproj", "{98752CCD-D5F2-4F15-BC88-B642F3918EC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98752CCD-D5F2-4F15-BC88-B642F3918EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98752CCD-D5F2-4F15-BC88-B642F3918EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98752CCD-D5F2-4F15-BC88-B642F3918EC6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{98752CCD-D5F2-4F15-BC88-B642F3918EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98752CCD-D5F2-4F15-BC88-B642F3918EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98752CCD-D5F2-4F15-BC88-B642F3918EC6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBD58C66-1258-4564-91A8-E5EE8899892A}
+	EndGlobalSection
+EndGlobal
