@@ -9,6 +9,7 @@
     border-radius: 8px;
     background-image: url("https://mta.ca/sites/default/files/2022-06/Banner-Campus.jpg");
     background-size: cover;
+    margin-bottom: 15vh;
 }
 .leftSide {
     display: table-row;

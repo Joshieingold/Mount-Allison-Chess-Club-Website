@@ -54,3 +54,7 @@ button {
 
 
 
+    link[rel="icon"] {
+      width: 10px;
+      height: auto;
+  }

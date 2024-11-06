@@ -9,7 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem auto;
+    margin: 2vh auto;
+    margin-bottom: 15vh;
     border-radius: 16px;
 }
 
