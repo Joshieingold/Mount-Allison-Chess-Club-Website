@@ -122,8 +122,9 @@
     color: black;
 }
 .learnMoreBtn:hover {
-    border-color: rgb(199, 18, 49);
-    background-color: rgba(199, 187, 18, 0.582);
+    border-color: rgb(199, 187, 18);
+    background-color: rgb(199, 187, 18);
+    color: white;
     transition: 0.5s;
 }
 .eventDescription {

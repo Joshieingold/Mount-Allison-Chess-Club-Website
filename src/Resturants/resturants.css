@@ -1,0 +1,65 @@
+.resturantContainer {
+    height: 100vh;
+    margin-bottom: 15vh;
+}
+
+.cardContainer {
+    color: black;
+    width: 90vw;
+    height: 85vh;
+    margin: 0 auto;
+    margin-bottom: 15vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+}
+.resturantCard {
+    height: 70%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 1rem;
+    border-radius: 8px;
+    background-color: rgb(199, 18, 49);
+    color: white;
+    box-shadow: 9px 9px black;
+    margin-top: 0;
+}
+.title {
+    height: 10%;
+    color: black;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.resturantImg {
+    object-fit: cover;
+    height:50%;
+    width: 100%
+}
+.learnMoreButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+}
+.resturantName {
+    font-size: 1.25rem;
+
+}
+.learnMoreButton:hover {
+    background-color: rgb(199, 187, 18);
+    color:white ;
+    transition: 0.25s;
+}
