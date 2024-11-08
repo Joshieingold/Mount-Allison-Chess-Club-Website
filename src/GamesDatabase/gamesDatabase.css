@@ -1,0 +1,33 @@
+.mainContainerDatabase {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+.title.database {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.tournamentCard {
+    background-color: rgb(17, 17, 17);
+    width: 80vw;
+    display: flex;
+    margin-bottom: 1rem;
+    
+    align-items: center;
+    padding: 10px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 2rem;
+    box-shadow: 10px 10px black;
+    justify-content: space-around;
+    
+}
