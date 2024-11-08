@@ -18,8 +18,8 @@
 
 .sidebar {
     width: 15%;
-    background-color: rgb(181, 147, 14);
-    border-right: 2px solid rgb(146, 25, 49);
+    background-color: rgba(190, 161, 43, 0.719);
+
     padding: 1rem;
     border-radius: 8px; 
 }
