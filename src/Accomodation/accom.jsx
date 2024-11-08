@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./accom.css";
-import Coastal from "../assets/Coastal.png";
 const accommodations = [
     {
         name: "Coastal Inn",
@@ -62,7 +61,7 @@ const Accomodation = () => {
             <h1 className="sectionTitle">Accommodation</h1>
 
             <div className="accom-container">
-                {/* Sidebar with accommodation names */}
+
                 <div className="sidebar">
                     {accommodations.map((accom, index) => (
                         <button
@@ -76,12 +75,12 @@ const Accomodation = () => {
                     ))}
                 </div>
 
-                {/* Main content displaying image as background */}
+
                 <div
                     className="info-section"
                     style={{ backgroundImage: `url(${selectedAccommodation.image})` }}
                 >
-                    {/* Diagonal overlay with info */}
+
                     <div className="overlay-box">
                         <h2>{selectedAccommodation.name}</h2>
                         <p>{selectedAccommodation.description}</p>

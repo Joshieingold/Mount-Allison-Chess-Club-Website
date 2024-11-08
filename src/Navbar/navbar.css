@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     z-index: 3;
-    background: rgb(146, 25, 49);
+    background: rgb(199, 18, 49);
 
 
 }
@@ -42,7 +42,7 @@
     color: white;
     cursor: pointer;
     white-space:nowrap;
-    border-radius; 5px;
+    border-radius: 5px;
     padding: 0.5rem;
 }
 

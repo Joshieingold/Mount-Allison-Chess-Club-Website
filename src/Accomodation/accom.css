@@ -11,17 +11,19 @@
 
 .accom-container {
     display: flex;
-    justify-content: space-between;
+    width: 90vw;
     align-content: center;
 
 }
 
 .sidebar {
     width: 15%;
-    background-color: rgba(190, 161, 43, 0.719);
+    background-color: rgb(199, 18, 49);
 
     padding: 1rem;
-    border-radius: 8px; 
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .sidebar-item {
@@ -40,19 +42,19 @@
 }
 
     .sidebar-item.active {
-        background-color: rgb(146, 25, 49);
+        background-color: rgb(199, 187, 18);
         color: white;
         font-weight: 800;
     }
 
     .sidebar-item:hover {
-        background-color: rgb(146, 25, 49);
+        background-color: rgb(199, 187, 18);
         color: white;
 
     }
 
 .info-section {
-    width: 80%;
+    width: 85%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,7 +64,9 @@
     height: 65vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 
 }
 
@@ -83,6 +87,7 @@
 h2 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
+
 }
 
 p {
@@ -95,8 +100,25 @@ p {
     font-weight: bold;
 }
 .linkBtn {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.644);
     color: black;
+    border: 2px solid black;
 }
-
+.linkBtn:hover {
+    background-color: rgb(199, 187, 18);
+    color: white;
+    border-color: rgb(199, 187, 18);
+    transition: 0.75s;
+}
+.sectionTitle {
+    background-color: rgb(199, 18, 49);
+    color: white;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    box-shadow: 10px 10px black;
+    border: 2px solid white;
+}
 /* Make sure the overlay box looks good on smaller screens */
