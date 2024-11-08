@@ -120,5 +120,6 @@ p {
     border-radius: 5rem;
     box-shadow: 10px 10px black;
     border: 2px solid white;
+    padding: 0.5rem;
 }
 /* Make sure the overlay box looks good on smaller screens */
