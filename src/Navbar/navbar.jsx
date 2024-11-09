@@ -1,7 +1,7 @@
 import React from "react";
-import "./navbar.css";
 import { Link } from "react-scroll";
-import logo from "../assets/mtachesslogo.png";
+import logo from "../assets/MACC Official Logo Transparent.png";
+import "./navbar.css";
 
 const Navbar = () => {
     return (
@@ -9,7 +9,7 @@ const Navbar = () => {
             <button onClick={reloadPage} className="logoButton">
                 <img src={ logo } alt="Mount Allison Chess Club Logo" className="logo" />
             </button>
-            <div className="DesktopMenu">
+            <div className="desktopMenu">
                 <Link className="desktopMenuListItem">Home</Link>
                 <Link className="desktopMenuListItem">Events</Link>
                 <Link className="desktopMenuListItem">Accomodation</Link>
