@@ -5,7 +5,7 @@ import "./navbar.css";
 
 const Navbar = () => {
     return (
-        <nav className="navbar">
+        <div className="navbar">
             <button onClick={reloadPage} className="logoButton">
                 <img src={ logo } alt="Mount Allison Chess Club Logo" className="logo" />
             </button>
@@ -17,7 +17,7 @@ const Navbar = () => {
                 <Link className="desktopMenuListItem">Games Database</Link>
             </div>
             <button className="Contactbtn">Contact Us</button>
-        </nav>
+        </div>
     )
 }
 export default Navbar

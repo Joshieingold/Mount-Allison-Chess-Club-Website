@@ -57,7 +57,7 @@ const Accomodation = () => {
     const [selectedAccommodation, setSelectedAccommodation] = useState(accommodations[0]);
 
     return (
-        <section id="accomodation">
+        <section className="accomodation">
             <h1 className="sectionTitle">Accommodation</h1>
 
             <div className="accom-container">

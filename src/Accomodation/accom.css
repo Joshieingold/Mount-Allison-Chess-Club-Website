@@ -1,11 +1,13 @@
-#accomodation {
-    padding: 2rem;
+.accomodation {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 8px;
     color: black;
     width: 90vw;
     height: 85vh;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 15vh;
 }
 
