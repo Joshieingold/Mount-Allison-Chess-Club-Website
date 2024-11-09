@@ -5,7 +5,7 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    margin-bottom: 15vh;
+    margin-bottom: 5vh;
 }
 
 .cardContainer {
@@ -21,6 +21,9 @@
     border-radius: 8px;
 
 }
+.resturantCard:hover {
+    transform: translateY(-10px);
+}
 .resturantCard {
     height: 70%;
     width: 20%;
@@ -35,6 +38,7 @@
     color: white;
     box-shadow: 9px 9px black;
     margin-top: 0;
+    transition: 0.5s;
 }
 .title {
     
@@ -49,6 +53,7 @@
     border: 2px solid white;
     width: 90%;
     padding: 0.5rem;
+
 
 }
 .resturantImg {
@@ -68,6 +73,7 @@
 }
 .resturantName {
     font-size: 1.25rem;
+    margin-bottom: 5px;
 
 }
 .learnMoreButton:hover {

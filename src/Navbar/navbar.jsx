@@ -12,9 +12,9 @@ const Navbar = () => {
             <div className="desktopMenu">
                 <Link className="desktopMenuListItem">Home</Link>
                 <Link className="desktopMenuListItem">Events</Link>
-                <Link className="desktopMenuListItem">Accomodation</Link>
-                <Link className="desktopMenuListItem" >Resturants</Link>
-                <Link className="desktopMenuListItem">Games Database</Link>
+                <Link className="desktopMenuListItem">Club Games</Link>
+                <Link className="desktopMenuListItem" >Visiting Sackville</Link>
+
             </div>
             <button className="Contactbtn">Contact Us</button>
         </div>

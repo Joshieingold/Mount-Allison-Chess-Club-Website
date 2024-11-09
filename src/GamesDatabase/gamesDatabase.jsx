@@ -2,7 +2,7 @@ import "./gamesDatabase.css";
 const GamesDatabase = () => {
     return (        
         <div className="mainContainerDatabase">
-            <h1 className="title database">Database of Games</h1>
+            <h1 className="title database">Club Database</h1>
             <div className="cardSection">
                 <div className="tournamentCard">
                     <h3 className="tournamentTitle">Mount Allison Open Chess Championship 2023</h3>
