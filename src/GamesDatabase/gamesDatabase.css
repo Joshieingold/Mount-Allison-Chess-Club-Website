@@ -98,3 +98,8 @@
 .gamesLink:hover {
     background-color: #e9c213;
 }
+.cardImg {
+    width: 50%;
+    height: 50%;
+    object-fit: scale-down;
+}
