@@ -3,7 +3,7 @@ import "./events.css";
 
 const Events = () => {
     return (
-        <section className="events">
+        <section className="events" id="Events">
             <div className="leftSide">
                 <div className="outContainer">
                     <div className="eventBanner">

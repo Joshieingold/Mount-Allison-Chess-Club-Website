@@ -1,7 +1,7 @@
 import "./gamesDatabase.css";
 const GamesDatabase = () => {
     return (        
-        <div className="mainContainerDatabase">
+        <div className="mainContainerDatabase" id="GamesDatabase">
             <h1 className="title database">Club Database</h1>
             <div className="cardSection">
                 <div className="tournamentCard">
