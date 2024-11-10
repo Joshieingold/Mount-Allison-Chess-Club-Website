@@ -34,11 +34,11 @@ const Navbar = () => {
                 <img className="logo" src={logo} alt="Logo" onClick={reloadPage}/>
                 <h1 className="clubTitle">Mount Allison Chess Club</h1>
                 <div className="socialContainer">
-                    <a className="icon instagram" href="https://www.instagram.com/mta_chess/">
-                        <img src="https://app.fide.com/upload/7/16bbc49864ce3a3875c3e0c354b3806c.svg" alt="Instagram" />
+                    <a className="instagram" href="https://www.instagram.com/mta_chess/">
+                        <img src="https://app.fide.com/upload/7/16bbc49864ce3a3875c3e0c354b3806c.svg" alt="Instagram" className="icon"/>
                     </a>
-                    <a className="icon facebook" href="https://www.facebook.com/groups/mtachess/?ref=share&mibextid=NSMWBT">
-                        <img src="https://app.fide.com/upload/5/b7536cc9d09fed04bce5eff6fff07dbd.svg" alt="Facebook" />
+                    <a className="facebook" href="https://www.facebook.com/groups/mtachess/?ref=share&mibextid=NSMWBT">
+                        <img src="https://app.fide.com/upload/5/b7536cc9d09fed04bce5eff6fff07dbd.svg" alt="Facebook"  className="icon"/>
                     </a>
                 </div>
             </div>

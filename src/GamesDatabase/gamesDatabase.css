@@ -21,6 +21,7 @@
     width: 90%;
     padding: 0.5rem;
     padding: 3%;
+    margin-bottom: 5rem;
 }
 
 .cardSection {
@@ -35,6 +36,7 @@
     scrollbar-width: thin;
     scrollbar-color: #c71231 #f4f4f9;
     height: 80%;
+    width: 90%;
 }
 
 .cardSection::-webkit-scrollbar {
@@ -68,10 +70,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 90%;
 }
 
 .tournamentCard:hover {
-    transform: translateY(-8px);
+    transform: translateY(8px);
 }
 
 .tournamentTitle {

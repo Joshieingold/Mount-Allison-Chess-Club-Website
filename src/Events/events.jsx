@@ -8,7 +8,7 @@ const Events = () => {
                 <div className="outContainer">
                     <div className="eventBanner">
                         <h3 className="bannerTitle">EVENTS AND GAMES</h3>
-                        <p className="bannerDescription">We play chess and are happy if you come to an event.</p>
+                        <p className="bannerDescription">See if there are any upcoming events you can make it to!</p>
                     </div>
                     
                 </div>
@@ -16,7 +16,15 @@ const Events = () => {
             </div>
             <div className="rightSide">
                 <div className="eventContainer">
-                    <h3 className="dateText first">24 June</h3>
+                    <h3 className="dateText first">14 Nov</h3>
+                    <div className="eventDescriptionContainer">
+                        <h3 className="eventTitle">Club Meeting</h3>
+                        <p className="eventDescription">Join us in the Chapel Basement from 6pm to 7pm!</p>
+                        <button className="learnMoreBtn">View Details</button>
+                    </div>
+                </div>
+                <div className="eventContainer">
+                    <h3 className="dateText second">21 Nov</h3>
                     <div className="eventDescriptionContainer">
                         <h3 className="eventTitle">Club Meeting</h3>
                         <p className="eventDescription">We play chess and smile while we do it</p>
@@ -24,18 +32,10 @@ const Events = () => {
                     </div>
                 </div>
                 <div className="eventContainer">
-                    <h3 className="dateText second">24 June</h3>
+                    <h3 className="dateText third">24 March</h3>
                     <div className="eventDescriptionContainer">
-                        <h3 className="eventTitle">Club Meeting</h3>
-                        <p className="eventDescription">We play chess and smile while we do it</p>
-                        <button className="learnMoreBtn">View Details</button>
-                    </div>
-                </div>
-                <div className="eventContainer">
-                    <h3 className="dateText third">24 June</h3>
-                    <div className="eventDescriptionContainer">
-                        <h3 className="eventTitle">Club Meeting</h3>
-                        <p className="eventDescription">We play chess and smile while we do it</p>
+                        <h3 className="eventTitle">Mount Allison Open 2025</h3>
+                        <p className="eventDescription">Our annual CFC rated tournament!</p>
                         <button className="learnMoreBtn">View Details</button>
                     </div>
                 </div>

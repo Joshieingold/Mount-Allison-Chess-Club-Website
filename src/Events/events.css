@@ -91,6 +91,7 @@
     height: 25%;
     margin: 2%;
     border-radius: 8px;
+    transition: 0.5s;
 }
 .dateText {
     display: flex;
@@ -107,7 +108,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
-
+    gap: 5px;
     margin-left: 2%;
     
 }
@@ -133,8 +134,14 @@
 .eventTitle {
     margin: 0;
 }
-h3.dateText.first {
-    background-color: rgb(199, 18, 49);
-    color: rgb(255, 255, 255);
+.dateText {
+    transition: 0.5s;
+}
+.eventContainer:hover {
+    .dateText {
+        background-color: rgb(199, 18, 49);
+        
+    }
+    transform: translateX(-20px);
 
 }

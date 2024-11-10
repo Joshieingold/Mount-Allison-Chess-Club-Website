@@ -4,9 +4,9 @@ import './HomeSlider.css'; // Create a CSS file for styling
 const slides = [
     {
         id: 1,
-        title: "Welcome to Our Events",
-        description: "Join us for exciting events throughout the year!",
-        backgroundImage: "url('https://mta.ca/sites/default/files/2022-06/Banner-Campus.jpg')"
+        title: "Welcome to The Mount Allison Chess Club",
+        description: "Join us for one of our casual meetings, club tournaments, or CFC rated games!",
+        backgroundImage: "url('https://mallmaverick.imgix.net/web/property_managers/27/properties/238/all/20240109203413/chess-2493580_1280.jpg')"
     },
     {
         id: 2,
