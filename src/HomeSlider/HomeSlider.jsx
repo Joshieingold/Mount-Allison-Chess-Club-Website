@@ -34,7 +34,7 @@ const HomeSlider = () => {
     };
 
     return (
-        <div className="home-slider" style={{ backgroundImage: slides[currentSlide].backgroundImage }} id="Home">
+        <div className="home-slider" style={{ backgroundImage: slides[currentSlide].backgroundImage }}>
             <div className="slider-content">
                 <h1>{slides[currentSlide].title}</h1>
                 <p>{slides[currentSlide].description}</p>

@@ -3,7 +3,7 @@ import "./empty.css";
 
 function Empty() {
     return (
-        <div className="emptyDiv">
+        <div className="emptyDiv" id="Home">
             j
         </div>
     )
