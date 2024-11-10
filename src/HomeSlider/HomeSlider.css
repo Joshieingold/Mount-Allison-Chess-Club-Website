@@ -34,7 +34,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(156, 12, 12, 0.904);
+    background-color: rgba(156, 12, 12, 0);
     color: rgb(255, 255, 255);
     border: none;
     font-size: 2rem;
@@ -52,7 +52,6 @@ button.next {
     right: -20px;
 }
 .move:hover {
-    background-color: rgb(153, 0, 0);
     color: rgb(214, 158, 4);
 
 }

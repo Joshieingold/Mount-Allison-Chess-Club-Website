@@ -27,7 +27,7 @@ const Events = () => {
                     <h3 className="dateText second">21 Nov</h3>
                     <div className="eventDescriptionContainer">
                         <h3 className="eventTitle">Club Meeting</h3>
-                        <p className="eventDescription">We play chess and smile while we do it</p>
+                        <p className="eventDescription">Join us in the Chapel Basement from 6pm to 7pm!</p>
                         <button className="learnMoreBtn">View Details</button>
                     </div>
                 </div>
