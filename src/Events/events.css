@@ -145,3 +145,19 @@
     transform: translateX(-20px);
 
 }
+
+.learnMoreLink {
+    display: flex;
+    border: none;
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+    width: 10;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+
+}
+.learnMoreLink:hover {
+    color: white;
+}

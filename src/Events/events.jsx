@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import "./events.css";
-
 
 const Events = () => {
     return (
@@ -20,7 +20,7 @@ const Events = () => {
                     <div className="eventDescriptionContainer">
                         <h3 className="eventTitle">Club Meeting</h3>
                         <p className="eventDescription">Join us in the Chapel Basement from 6pm to 7pm!</p>
-                        <button className="learnMoreBtn">View Details</button>
+                        <button className="learnMoreBtn"><Link to="/calendar" className="learnMoreLink">View Details</Link></button>
                     </div>
                 </div>
                 <div className="eventContainer">
@@ -28,7 +28,7 @@ const Events = () => {
                     <div className="eventDescriptionContainer">
                         <h3 className="eventTitle">Club Meeting</h3>
                         <p className="eventDescription">Join us in the Chapel Basement from 6pm to 7pm!</p>
-                        <button className="learnMoreBtn">View Details</button>
+                        <button className="learnMoreBtn" ><Link to="/calendar" className="learnMoreLink">View Details</Link></button>
                     </div>
                 </div>
                 <div className="eventContainer">
@@ -36,7 +36,7 @@ const Events = () => {
                     <div className="eventDescriptionContainer">
                         <h3 className="eventTitle">Mount Allison Open 2025</h3>
                         <p className="eventDescription">Our annual CFC rated tournament!</p>
-                        <button className="learnMoreBtn">View Details</button>
+                        <button className="learnMoreBtn" >View Details</button>
                     </div>
                 </div>
             </div>
