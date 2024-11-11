@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
             <div className={`navbar ${isSticky ? 'sticky' : ''}`}>
                 <div className="desktopMenu">
-                    <Link className="desktopMenuListItem" to="/" smooth={true} duration={500}>Home</Link>
+                    <Link className="desktopMenuListItem" to="/" >Home</Link>
                     <Link className="desktopMenuListItem" to="/calendar">Events</Link>
                     <Link className="desktopMenuListItem" >Members</Link>
                     <Link className="desktopMenuListItem" >About Us</Link>

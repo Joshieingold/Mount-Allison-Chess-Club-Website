@@ -1,0 +1,19 @@
+.formContent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 62vh;
+}
+.adminTitle {
+    color: black;
+}
+.inputBox {
+    width: 20vw;
+    height: 7vh;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(24, 24, 24);
+    
+}
