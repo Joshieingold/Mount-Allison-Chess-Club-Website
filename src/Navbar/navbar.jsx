@@ -48,8 +48,8 @@ const Navbar = () => {
                 <div className="desktopMenu">
                     <Link className="desktopMenuListItem" to="/" >Home</Link>
                     <Link className="desktopMenuListItem" to="/calendar">Events</Link>
-                    <Link className="desktopMenuListItem" to="/admin">Members</Link>
-                    <Link className="desktopMenuListItem" >About Us</Link>
+                    <Link className="desktopMenuListItem">Members</Link>
+                    <Link className="desktopMenuListItem" to="/admin">Staff</Link>
                 </div>
             </div>
         </div>
