@@ -1,6 +1,6 @@
 import ClubTournament from "../assets/MACCLogoWTransparent.png";
 import MtaOpen2023 from "../assets/MTAOpenLogo.png";
-import Logo from "../assets/mtachesslogo.png";
+import Logo from "../assets/mtachesslogoBanner.png";
 import "./gamesDatabase.css";
 const GamesDatabase = () => {
     return (        
