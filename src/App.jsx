@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Calendar from './Calander/calendar.jsx'; // Ensure this path is correct
+import AdminNav from './Components/adminNav.jsx';
 import { auth } from './Components/database.jsx';
 import Login from './Components/login.jsx';
 import PlayerManagement from './Components/playerManagement.jsx';
@@ -60,8 +61,7 @@ function App() {
                 <Route path="/admin" element={
                     isAuthenticated && isAdmin ? (
                         <>
-                            <Navbar />
-                            <Empty/>
+                            <AdminNav isAdmin={isAdmin}/>
                             <PlayerManagement isAdmin={isAdmin} />
                         </>
                     ) : (

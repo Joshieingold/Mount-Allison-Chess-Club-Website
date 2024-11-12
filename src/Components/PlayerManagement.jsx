@@ -25,13 +25,26 @@ const PlayerManagement = ({ isAdmin }) => {
 
     const handleAddPlayer = async (e) => {
         e.preventDefault();
+        
+        // Set default values if fields are left blank
+        const defaultPictureUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pXis6BHUK50zntwuZHMqLKWFw6FkEgn4eg&s";
+        const defaultCfcRating = "N/A";
+        
+        const playerData = {
+            name,
+            rating,
+            cfcRating: cfcRating || defaultCfcRating,
+            pictureUrl: pictureUrl || defaultPictureUrl,
+        };
+        
         if (editingId) {
             const playerDoc = doc(db, 'players', editingId);
-            await updateDoc(playerDoc, { name, rating, cfcRating, pictureUrl });
+            await updateDoc(playerDoc, playerData);
             setEditingId(null);
         } else {
-            await addDoc(playersCollectionRef, { name, rating, cfcRating, pictureUrl });
+            await addDoc(playersCollectionRef, playerData);
         }
+        
         setName('');
         setRating('');
         setCfcRating('');
