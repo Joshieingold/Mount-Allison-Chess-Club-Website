@@ -75,6 +75,16 @@ function App() {
                         <Login setIsAdmin={setIsAdmin} />
                     </>
                 } />
+                <Route path="/admin/manage-slider" element={
+                    isAuthenticated && isAdmin ? (
+                        <>
+                            <AdminNav isAdmin={isAdmin}/>
+                            <PlayerManagement isAdmin={isAdmin} />
+                        </>
+                    ) : (
+                        <Navigate to="/admin/login" replace />
+                    )
+                } />
             </Routes>
             <Footer />
         </Router>

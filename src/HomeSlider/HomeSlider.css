@@ -2,12 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 65vh; /* Same height as .events */
-    width: 90vw; /* Same width as .events */
+    height: 65vh; /* Adjusted height */
+    width: 90vw; /* Adjusted width */
     color: white;
     margin: 0 auto;
     border-radius: 8px;
     background-size: cover;
+
     position: relative;
     overflow: hidden;
     transition: background-image 0.5s ease-in-out;
@@ -16,8 +17,7 @@
 }
 
 .slider-content {
-   
-    background-color: rgba(0, 0, 0, 0.555); /* Semi-transparent background for readability */
+    background-color: rgba(0, 0, 0, 0.55); /* Semi-transparent background for readability */
     padding: 20px;
     border-radius: 8px;
     display: flex;
@@ -28,30 +28,31 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    color: white;
 }
 
 .move {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(156, 12, 12, 0);
-    color: rgb(255, 255, 255);
+    background-color: transparent;
+    color: white;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
-    transition: 0.5s;
+    transition: color 0.5s;
 }
 
-button.prev {
+.move.prev {
     left: 10px;
 }
 
-button.next {
-    right: -20px;
+.move.next {
+    right: 10px;
 }
+
 .move:hover {
     color: rgb(214, 158, 4);
-
 }

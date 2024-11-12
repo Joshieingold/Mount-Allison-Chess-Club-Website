@@ -19,7 +19,6 @@ const PlayerManagement = ({ isAdmin }) => {
     const fetchPlayers = async () => {
         const data = await getDocs(playersCollectionRef);
         const playersList = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-        // Sort players alphabetically by name
         playersList.sort((a, b) => a.name.localeCompare(b.name));
         setPlayers(playersList);
     };
@@ -52,7 +51,7 @@ const PlayerManagement = ({ isAdmin }) => {
                 await addDoc(playersCollectionRef, playerData);
             }
 
-            // Reset state after adding or updating
+            // Resets after updating player.
             setEditingId(null);
             setName('');
             setRating('');
