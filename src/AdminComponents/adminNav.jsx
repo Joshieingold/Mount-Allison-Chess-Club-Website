@@ -4,11 +4,11 @@ import logo from "../assets/mtachesslogo.png";
 import './adminNav.css';
 
 const AdminNav = ({ setIsAdmin }) => {
-    const navigate = useNavigate(); // Correctly initialize navigate
+    const navigate = useNavigate();
 
     const handleSignOut = () => {
-        setIsAdmin(false);  // Set admin state to false
-        navigate('/');      // Redirect to home route
+        setIsAdmin(false);  
+        navigate('/');      
     };
 
     return (
