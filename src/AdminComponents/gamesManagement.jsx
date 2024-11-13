@@ -78,16 +78,18 @@ const GamesManagement = ({ isAdmin }) => {
         );
 
         setGames(updatedGames);
-
+        fetchGames()
         // Update the order in Firestore
         const gameDoc = doc(db, 'games', gameId);
         await updateDoc(gameDoc, { order: newOrder });
+        
     };
 
     return (
         <div className='mainContainer'>
             <h1 className='manageTitle'>Manage Games Collections</h1>
             <div className='mainDisplayContainers'>
+                
                 {isAdmin ? (
                     <form onSubmit={handleAddGame} className='formLocation'>
                         <input
@@ -118,6 +120,8 @@ const GamesManagement = ({ isAdmin }) => {
                             {editingId ? 'Update Game Collection' : 'Add Game Collection'}
                         </button>
                     </form>
+                    
+                    
                 ) : (
                     <p>You do not have permission to manage games.</p>
                 )}
