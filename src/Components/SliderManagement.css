@@ -1,0 +1,151 @@
+/* src/components/SliderManagement.css */
+
+/* Main container for the slider management */
+.slider-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Title styling */
+.slider-manage-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Main display for the edit section and card section */
+.slider-main-display {
+    display: flex;
+    width: 100%;
+}
+
+/* Container for the form on the left */
+.slider-form {
+    flex: 1; /* Takes up 1 part of the available space */
+    padding-right: 20px; /* Space between form and cards */
+    margin-left: 15vw;
+}
+
+/* Form styling */
+.slider-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Input styling */
+.slider-input.slider-manage-input,
+.slider-input.slider-manage-textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button styling */
+.slider-input.slider-manage-button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+/* Button hover effect */
+.slider-input.slider-manage-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Card container styling */
+.slider-card-container {
+    flex: 2; /* Takes up 2 parts of the available space */
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Allows horizontal scrolling */
+    padding-left: 20px; /* Space between form and cards */
+    list-style-type: none; /* Remove bullet points */
+}
+
+/* Individual card styling */
+.slider-card {
+    background-color: #f8f9fa; /* Light background for cards */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    width: 200px; /* Fixed width for cards */
+}
+
+/* Image styling */
+.slider-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Info section styling */
+.slider-info {
+    margin-top: 10px;
+}
+
+/* Button container styling */
+.slider-button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+/* Button styling */
+.slider-button-container button {
+    background-color: #dc3545; /* Red for delete button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+/* Button hover effect */
+.slider-button-container button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Error message styling */
+.error-message {
+    color: #dc3545; /* Red color for error messages */
+    margin-top: 20px;
+}
+
+/* Loading message styling */
+.loading-message {
+    font-size: 1.2rem;
+    color: #007bff; /* Blue color for loading message */
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    .slider-main-display {
+        flex-direction: column; /* Stack the form and cards on smaller screens */
+    }
+
+    .slider-form {
+        padding-right: 0; /* Remove right padding on smaller screens */
+        margin-bottom: 20px; /* Add space below the form */
+    }
+
+    .slider-card-container {
+        padding-left: 0; /* Remove left padding on smaller screens */
+        overflow-x: scroll; /* Allow horizontal scrolling */
+    }
+}

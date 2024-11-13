@@ -43,6 +43,14 @@ const AdminNav = ({ setIsAdmin }) => {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink
+                        to="/admin/manage-events"
+                        className={({ isActive }) => isActive ? 'active-link' : ''}
+                    >
+                        Manage Events
+                    </NavLink>
+                </li>
+                <li>
                     <button className="signOutButton" onClick={handleSignOut}>
                         Sign Out
                     </button>

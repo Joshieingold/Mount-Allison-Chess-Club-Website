@@ -7,6 +7,7 @@ import AdminNav from './Components/adminNav.jsx';
 import { auth } from './Components/database.jsx';
 import Login from './Components/login.jsx';
 import PlayerManagement from './Components/playerManagement.jsx';
+import SliderManagement from './Components/SliderManagement.jsx';
 import Empty from "./Empty/empty.jsx";
 import Events from "./Events/events.jsx";
 import Footer from "./Footer/footer.jsx";
@@ -79,7 +80,7 @@ function App() {
                     isAuthenticated && isAdmin ? (
                         <>
                             <AdminNav isAdmin={isAdmin}/>
-                            <PlayerManagement isAdmin={isAdmin} />
+                            <SliderManagement isAdmin={isAdmin} />
                         </>
                     ) : (
                         <Navigate to="/admin/login" replace />

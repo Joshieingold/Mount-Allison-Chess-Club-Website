@@ -2,57 +2,57 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 65vh; /* Adjusted height */
-    width: 90vw; /* Adjusted width */
+    height: 65vh; /* Keeps height based on viewport height */
+    width: 90vw; /* Ensures it spans the full width of its container */
+
     color: white;
     margin: 0 auto;
     border-radius: 8px;
     background-size: cover;
-
+    background-position: center; /* Centers background image */
     position: relative;
     overflow: hidden;
     transition: background-image 0.5s ease-in-out;
-    z-index: 0;
     margin-bottom: 5rem;
 }
 
 .slider-content {
-    background-color: rgba(0, 0, 0, 0.55); /* Semi-transparent background for readability */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent for readability */
     padding: 20px;
     border-radius: 8px;
-    display: flex;
     text-align: center;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     position: absolute;
     bottom: 0;
     width: 100%;
-    color: white;
 }
 
 .move {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     font-size: 2rem;
     cursor: pointer;
     padding: 10px;
     border-radius: 50%;
-    transition: color 0.5s;
-}
-
-.move.prev {
-    left: 10px;
-}
-
-.move.next {
-    right: 10px;
+    transition: color 0.5s, background-color 0.3s;
 }
 
 .move:hover {
     color: rgb(214, 158, 4);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
 }
