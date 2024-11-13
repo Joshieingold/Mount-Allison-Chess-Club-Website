@@ -103,7 +103,7 @@
 .slider-card {
     background-color: #1f1f1f; /* Dark background for cards */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 5px 5px black;
     text-align: center;
     padding: 15px;
     width: 100%; /* Fixed width for cards */

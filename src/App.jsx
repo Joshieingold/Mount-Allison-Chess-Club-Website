@@ -5,6 +5,7 @@ import './App.css';
 import Calendar from './Calander/calendar.jsx'; // Ensure this path is correct
 import AdminNav from './Components/adminNav.jsx';
 import { auth } from './Components/database.jsx';
+import GamesManagement from './Components/gamesManagement.jsx';
 import Login from './Components/login.jsx';
 import PlayerManagement from './Components/playerManagement.jsx';
 import SliderManagement from './Components/SliderManagement.jsx';
@@ -81,6 +82,16 @@ function App() {
                         <>
                             <AdminNav isAdmin={isAdmin}/>
                             <SliderManagement isAdmin={isAdmin} />
+                        </>
+                    ) : (
+                        <Navigate to="/admin/login" replace />
+                    )
+                } />
+                                <Route path="/admin/manage-games-database" element={
+                    isAuthenticated && isAdmin ? (
+                        <>
+                            <AdminNav isAdmin={isAdmin}/>
+                            <GamesManagement isAdmin={isAdmin}/>
                         </>
                     ) : (
                         <Navigate to="/admin/login" replace />

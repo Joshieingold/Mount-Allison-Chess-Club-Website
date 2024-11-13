@@ -1,36 +1,47 @@
-import ClubTournament from "../assets/MACCLogoWTransparent.png";
-import MtaOpen2023 from "../assets/MTAOpenLogo.png";
-import Logo from "../assets/mtachesslogoBanner.png";
+import { collection, getDocs } from 'firebase/firestore';
+import React, { useEffect, useState } from "react";
+import { db } from "../Components/database"; // Ensure this is the correct path to your firebaseConfig
 import "./gamesDatabase.css";
+
 const GamesDatabase = () => {
-    return (        
+    const [games, setGames] = useState([]);
+
+    useEffect(() => {
+        // Fetch games from Firebase
+        const fetchGames = async () => {
+            try {
+                const gamesCollection = collection(db, "games"); // Reference to the 'games' collection
+                const gamesSnapshot = await getDocs(gamesCollection); // Get documents from the collection
+                const gamesList = gamesSnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+
+                // Sort the games by the 'order' field (ascending order)
+                gamesList.sort((a, b) => (a.order || 0) - (b.order || 0));
+
+                setGames(gamesList);
+            } catch (error) {
+                console.error("Error fetching games:", error);
+            }
+        };
+
+        fetchGames();
+    }, []);
+
+    return (
         <div className="mainContainerDatabase" id="GamesDatabase">
             <h1 className="title database">Club Database</h1>
             <div className="cardSection">
-                <div className="tournamentCard">
-                    <img src={MtaOpen2023} className="cardImg"></img>
-                    <h3 className="tournamentTitle">Mount Allison Open Chess Championship 2023</h3>
-                    <a href="https://lichess.org/study/UshxlBum/hGj8sKb1">
-                        <button className="gamesLink">View Games</button>
-                    </a>
-                </div>
-                <div className="tournamentCard">
-                    <img src={ClubTournament} className="cardImg"></img>
-                    <h3 className="tournamentTitle">MACC Internal Rapid Chess Tournament 2023</h3>
-                    <a href="https://lichess.org/study/SBpNjvdh">
-                        <button className="gamesLink">View Games</button>
-                    </a>
-                </div>
-                <div className="tournamentCard">
-                    <img src={Logo} className="cardImg"></img>
-                    <h3 className="tournamentTitle">Club Meeting Games</h3>
-                    <a href="">
-                        <button className="gamesLink">View Games</button>
-                    </a>
-                </div>
-
-                
-
+                {games.map(game => (
+                    <div key={game.id} className="tournamentCard">
+                        <img src={game.imageUrl} className="cardImg" alt={game.title} />
+                        <h3 className="tournamentTitle">{game.title}</h3>
+                        <a href={game.link} target="_blank" rel="noopener noreferrer">
+                            <button className="gamesLink">View Games</button>
+                        </a>
+                    </div>
+                ))}
             </div>
         </div>
     );

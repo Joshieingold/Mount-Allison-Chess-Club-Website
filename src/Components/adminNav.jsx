@@ -39,7 +39,7 @@ const AdminNav = ({ setIsAdmin }) => {
                         to="/admin/manage-games-database"
                         className={({ isActive }) => isActive ? 'active-link' : ''}
                     >
-                        Manage Games Database
+                        Manage Games Collections
                     </NavLink>
                 </li>
                 <li>
