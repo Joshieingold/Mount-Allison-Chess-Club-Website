@@ -31,7 +31,7 @@ const AdminNav = ({ setIsAdmin }) => {
                         to="/admin/manage-slider"
                         className={({ isActive }) => isActive ? 'active-link' : ''}
                     >
-                        Manage Slider
+                        Manage Slides
                     </NavLink>
                 </li>
                 <li>

@@ -5,21 +5,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    justify-content: center;
     padding: 20px;
+    background-color: #f4f4f4; /* Light background for the main container */
+    min-height: 90vh; /* Ensure it takes full height */
 }
 
 /* Title styling */
 .slider-manage-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #ac1616;
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 5000;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px black;
+
+
 }
 
 /* Main display for the edit section and card section */
 .slider-main-display {
     display: flex;
-    width: 100%;
+    flex-direction: row;
+    width: 85vw;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
 }
 
 /* Container for the form on the left */
@@ -27,30 +44,38 @@
     flex: 1; /* Takes up 1 part of the available space */
     padding-right: 20px; /* Space between form and cards */
     margin-left: 15vw;
-}
-
-/* Form styling */
-.slider-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+
+    border-radius: 8px;
+
+    padding: 20px; /* Padding inside the form */
 }
 
 /* Input styling */
 .slider-input.slider-manage-input,
 .slider-input.slider-manage-textarea {
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
     border-radius: 5px;
     border: 1px solid #ccc;
+    margin-bottom: 15px; /* Space between inputs */
+    transition: border-color 0.3s;
+}
+
+/* Input focus effect */
+.slider-input.slider-manage-input:focus,
+.slider-input.slider-manage-textarea:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
 }
 
 /* Button styling */
 .slider-input.slider-manage-button {
-    padding: 10px;
+    padding: 12px;
     font-size: 1rem;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #2c2c2c; /* Primary button color */
     color: #fff;
     border: none;
     cursor: pointer;
@@ -65,24 +90,27 @@
 
 /* Card container styling */
 .slider-card-container {
-    flex: 2; /* Takes up 2 parts of the available space */
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    overflow-x: auto; /* Allows horizontal scrolling */
-    padding-left: 20px; /* Space between form and cards */
+    overflow-y: scroll;
     list-style-type: none; /* Remove bullet points */
+    height: 50vh;
+    padding: 0 2rem; /* Padding for the card container */
 }
 
 /* Individual card styling */
 .slider-card {
-    background-color: #f8f9fa; /* Light background for cards */
+    background-color: #1f1f1f; /* Dark background for cards */
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     text-align: center;
     padding: 15px;
-    width: 200px; /* Fixed width for cards */
+    width: 100%; /* Fixed width for cards */
+    transition: transform 0.3s; /* Animation for hover effect */
 }
+
+
 
 /* Image styling */
 .slider-image {
@@ -95,6 +123,7 @@
 /* Info section styling */
 .slider-info {
     margin-top: 10px;
+    color: #fff; /* White text for better contrast */
 }
 
 /* Button container styling */
@@ -106,14 +135,13 @@
 
 /* Button styling */
 .slider-button-container button {
-    background-color: #dc3545; /* Red for delete button */
+    background-color: #525252; /* Red for delete button */
     color: white;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-
 }
 
 /* Button hover effect */
@@ -124,28 +152,5 @@
 /* Error message styling */
 .error-message {
     color: #dc3545; /* Red color for error messages */
-    margin-top: 20px;
-}
 
-/* Loading message styling */
-.loading-message {
-    font-size: 1.2rem;
-    color: #007bff; /* Blue color for loading message */
-}
-
-/* Additional styles for responsiveness */
-@media (max-width: 768px) {
-    .slider-main-display {
-        flex-direction: column; /* Stack the form and cards on smaller screens */
-    }
-
-    .slider-form {
-        padding-right: 0; /* Remove right padding on smaller screens */
-        margin-bottom: 20px; /* Add space below the form */
-    }
-
-    .slider-card-container {
-        padding-left: 0; /* Remove left padding on smaller screens */
-        overflow-x: scroll; /* Allow horizontal scrolling */
-    }
 }
