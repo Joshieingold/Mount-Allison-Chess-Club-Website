@@ -1,7 +1,7 @@
 // Import Firebase and Firestore
 import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
-import { db } from '../Components/database.jsx'; // Adjust the import based on your Firebase config file path
+import { db } from '../AdminComponents/database.jsx'; // Adjust the import based on your Firebase config file path
 import "./HomeSlider.css";
 
 // Your component

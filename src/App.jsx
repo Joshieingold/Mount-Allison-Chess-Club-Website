@@ -1,14 +1,14 @@
 import { onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import AdminNav from './AdminComponents/adminNav.jsx';
+import { auth } from './AdminComponents/database.jsx';
+import GamesManagement from './AdminComponents/gamesManagement.jsx';
+import Login from './AdminComponents/login.jsx';
+import PlayerManagement from './AdminComponents/playerManagement.jsx';
+import SliderManagement from './AdminComponents/SliderManagement.jsx';
 import './App.css';
 import Calendar from './Calander/calendar.jsx'; // Ensure this path is correct
-import AdminNav from './Components/adminNav.jsx';
-import { auth } from './Components/database.jsx';
-import GamesManagement from './Components/gamesManagement.jsx';
-import Login from './Components/login.jsx';
-import PlayerManagement from './Components/playerManagement.jsx';
-import SliderManagement from './Components/SliderManagement.jsx';
 import Empty from "./Empty/empty.jsx";
 import Events from "./Events/events.jsx";
 import Footer from "./Footer/footer.jsx";

@@ -128,3 +128,8 @@
 .gameButtonContainer button:hover {
     background-color: #ac16166e;
 }
+.gameCardContainer {
+    height: 70vh;
+    padding: 15px;
+    overflow-y: scroll;
+}

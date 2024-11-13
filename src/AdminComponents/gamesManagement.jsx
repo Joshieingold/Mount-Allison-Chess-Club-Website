@@ -115,7 +115,7 @@ const GamesManagement = ({ isAdmin }) => {
                             required
                         />
                         <button type="submit" className='inputBox manage'>
-                            {editingId ? 'Update Game' : 'Add Game'}
+                            {editingId ? 'Update Game Collection' : 'Add Game Collection'}
                         </button>
                     </form>
                 ) : (
@@ -147,8 +147,8 @@ const GamesManagement = ({ isAdmin }) => {
                                         type="number"
                                         value={game.order || ''}
                                         onChange={(e) => handleOrderChange(e, game.id)}
-                                        min="1"
                                         className="inputBox manage"
+                                        min={1}
                                     />
                                 </div>
                             )}

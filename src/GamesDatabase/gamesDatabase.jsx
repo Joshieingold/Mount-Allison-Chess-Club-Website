@@ -1,6 +1,6 @@
 import { collection, getDocs } from 'firebase/firestore';
 import React, { useEffect, useState } from "react";
-import { db } from "../Components/database"; // Ensure this is the correct path to your firebaseConfig
+import { db } from "../AdminComponents/database"; // Ensure this is the correct path to your firebaseConfig
 import "./gamesDatabase.css";
 
 const GamesDatabase = () => {
