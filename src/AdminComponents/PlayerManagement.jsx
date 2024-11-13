@@ -152,7 +152,7 @@ const PlayerManagement = ({ isAdmin }) => {
                             onChange={(e) => setJoinedDate(e.target.value)}
                             placeholder="Joined Date"
                         />
-                        <button type="submit" className='inputBox manage'>{editingId ? 'Update Player' : 'Add Player'}</button>
+                        <button type="submit" className='inputBox manage btn'>{editingId ? 'Update Player' : 'Add Player'}</button>
                     </form>
                 ) : (
                     <p>You do not have permission to manage players.</p>

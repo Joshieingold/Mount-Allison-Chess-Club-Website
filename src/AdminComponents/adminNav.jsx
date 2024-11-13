@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import logo from "../assets/mtachesslogo.png";
 import './adminNav.css';
 
 const AdminNav = ({ setIsAdmin }) => {
@@ -14,7 +15,7 @@ const AdminNav = ({ setIsAdmin }) => {
         <nav className="adminNav">
             <div className="adminNav__logo">
                 <NavLink to="/">
-                    <img src="src/assets/mtachesslogo.png" alt="Admin Logo" className='adminLogo'/>
+                    <img src={logo} alt="Admin Logo" className='adminLogo'/>
                 </NavLink>
             </div>
             <ul className="adminNav__links">

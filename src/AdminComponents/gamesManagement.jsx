@@ -116,7 +116,7 @@ const GamesManagement = ({ isAdmin }) => {
                             placeholder="Link"
                             required
                         />
-                        <button type="submit" className='inputBox manage'>
+                        <button type="submit" className='inputBox manage btn'>
                             {editingId ? 'Update Game Collection' : 'Add Game Collection'}
                         </button>
                     </form>

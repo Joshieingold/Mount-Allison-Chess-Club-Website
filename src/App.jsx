@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import AdminNav from './AdminComponents/adminNav.jsx';
 import { auth } from './AdminComponents/database.jsx';
+import EventManagement from './AdminComponents/eventManagement.jsx';
 import GamesManagement from './AdminComponents/gamesManagement.jsx';
 import Login from './AdminComponents/login.jsx';
 import PlayerManagement from './AdminComponents/playerManagement.jsx';
@@ -87,11 +88,21 @@ function App() {
                         <Navigate to="/admin/login" replace />
                     )
                 } />
-                                <Route path="/admin/manage-games-database" element={
+                <Route path="/admin/manage-games-database" element={
                     isAuthenticated && isAdmin ? (
                         <>
                             <AdminNav isAdmin={isAdmin}/>
                             <GamesManagement isAdmin={isAdmin}/>
+                        </>
+                    ) : (
+                        <Navigate to="/admin/login" replace />
+                    )
+                } />
+                <Route path="/admin/manage-events" element={
+                    isAuthenticated && isAdmin ? (
+                        <>
+                            <AdminNav isAdmin={isAdmin}/>
+                            <EventManagement/>
                         </>
                     ) : (
                         <Navigate to="/admin/login" replace />

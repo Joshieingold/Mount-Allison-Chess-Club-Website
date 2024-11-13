@@ -1,43 +1,34 @@
 // src/Calendar/Calendar.jsx
+import { collection, getDocs } from 'firebase/firestore';
 import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { db } from '../AdminComponents/database.jsx';
 import './calendar.css';
 
-const generateClubMeetings = () => {
-    const meetings = [];
-    const startDate = new Date(); // Current date
-    const endDate = new Date(2025, 4, 1); // May 1, 2024 (end of April)
-
-    // Set the start date to the next Thursday
-    startDate.setDate(startDate.getDate() + ((4 - startDate.getDay() + 7) % 7));
-
-    while (startDate < endDate) {
-        meetings.push({
-            id: meetings.length + 1,
-            date: new Date(startDate), // Create a new date object
-            title: 'Club Meeting',
-            description: 'Weekly meeting from 6 PM to 7 PM.',
-        });
-        startDate.setDate(startDate.getDate() + 7); // Move to the next Thursday
-    }
-
-    return meetings;
-};
-
-const eventsData = [
-    {
-        id: -1,
-        date: new Date(2025, 2, 24), // October 25, 2023
-        title: 'Mount Allison Open 2025',
-        description: 'Our Annual CFC Tournament, more details to be announced!',
-    },
-    ...generateClubMeetings(),
-];
-
-
 const Calendar = () => {
+    const [eventsData, setEventsData] = useState([]);
     const [selectedEvent, setSelectedEvent] = useState(null);
     const eventListRef = useRef(null);
     const eventDetailsRef = useRef(null);
+
+    const fetchEvents = async () => {
+        try {
+            const eventsCollection = collection(db, 'events');
+            const eventSnapshot = await getDocs(eventsCollection);
+            const events = eventSnapshot.docs.map(doc => ({
+                id: doc.id,
+                ...doc.data(),
+                date: new Date(doc.data().date + "T00:00:00") // Parse date string to Date object with fixed time
+            }));
+
+            // Sort events by date
+            events.sort((a, b) => a.date - b.date); // Sort in ascending order by date
+
+            setEventsData(events);
+        } catch (error) {
+            console.error("Error fetching events: ", error);
+        }
+    };
 
     const handleEventClick = (event) => {
         setSelectedEvent(event);
@@ -53,6 +44,7 @@ const Calendar = () => {
     };
 
     useEffect(() => {
+        fetchEvents(); // Fetch events when the component mounts
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
@@ -61,7 +53,6 @@ const Calendar = () => {
 
     return (
         <div className='calendarContainer'>
-            
             <div className='eventList' ref={eventListRef}>
                 {eventsData.map(event => (
                     <div 
@@ -70,7 +61,7 @@ const Calendar = () => {
                         onClick={() => handleEventClick(event)}
                     >
                         <h3>{event.title}</h3>
-                        <p>{event.date.toDateString()}</p>
+                        <p>{event.date.toDateString('en-CA')}</p> {/* Display date in YYYY-MM-DD format */}
                     </div>
                 ))}
             </div>
@@ -78,7 +69,14 @@ const Calendar = () => {
                 <div className={`eventDetails ${selectedEvent ? 'show' : ''}`} ref={eventDetailsRef}>
                     <h2>{selectedEvent.title}</h2>
                     <p>{selectedEvent.description}</p>
-                    <p>Date: {selectedEvent.date.toDateString()}</p>
+                    <p>Time: {selectedEvent.time}</p>
+                    <p>Location: {selectedEvent.location}</p>
+                    <p>Date: {selectedEvent.date.toDateString('en-CA')}</p> {/* Consistent date format */}
+                    {selectedEvent.eventDetails && selectedEvent.eventDetails !== "" && (
+                        <Link to={`/event/${selectedEvent.id}`} className="eventLink">
+                            View Event Details
+                        </Link>
+                    )}
                 </div>
             )}
         </div>

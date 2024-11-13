@@ -16,7 +16,12 @@
 
 
 }
-
+.inputBox.manage.btn:hover {
+    background-color: #0056b3;
+}
+.inputBox.manage.btn {
+    transition: 0.5s;
+}
 .mainContainer {
  
     display: flex;

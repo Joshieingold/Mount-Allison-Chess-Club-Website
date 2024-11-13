@@ -1,0 +1,114 @@
+.wrapper {
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 15vw;
+    color: black;
+    height: 90vh;
+}
+.eventsManageTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #ac1616;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 5px 5px black;
+}
+.eventsMainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    color: black;
+    padding: 20px;
+    height: 70vh;
+}
+.eventsFormContainer {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin-right: 3rem;
+
+
+}
+
+.eventsInputBox {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 20vw;
+    margin-bottom: 5px;
+
+}
+.eventsListContainer {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 50vw;
+    padding: 10px;
+    overflow-y: scroll;
+}
+.eventsCard {
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin-bottom: 15px;
+    width: 45vw;
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+    transition: transform 0.2s ease;
+    color: white;
+    position: relative;
+
+}
+.eventsCard:hover {
+    transform: translateX(-5px);
+}
+.eventsInfo {
+    margin-left: 2vw;
+}
+.gameButtonContainer {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: 0.5s;
+}
+.gameButtonContainer:hover {
+    background-color: #0056b3;
+    border-color: none;
+}
+.commandBtn {
+    border:none;
+    transition: 0.5s;
+    margin-bottom: 10px;
+    display: flex;
+
+}
+.commandBtn:hover {
+    background-color: #ac16166e;
+    border-color: none;
+}
+.extraBtn {
+    width: 100%;
+    margin-top: 0.5rem;
+    transition: 0.5s;
+}
+.extraBtn:hover {
+    background-color: #0056b3;
+}
