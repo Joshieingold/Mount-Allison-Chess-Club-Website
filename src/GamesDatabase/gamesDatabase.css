@@ -4,6 +4,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: rgba(238, 238, 238, 0.541);
+    width: 90vw;
+    height:90vh;
+    background-image: url(https://fontawesome.com/social/chess-queen-alt?f=classic&s=&v=5);   
+    background-size: cover;
+    border-radius: 20px ;
 }
 
 .carousel {
@@ -14,6 +20,7 @@
     perspective: 500px; /* Make this into 50px maybe on mobile.*/
     height: 90vh;
     width: 90vw;
+    
 }
 
 #carousel {
@@ -21,13 +28,14 @@
     align-items: center;
     justify-content: center;
     transform-style: preserve-3d;
+    
 }
 
 .tournamentCard {
     position: absolute;
     width: 20vw;
     height: 60vh;
-    background-color: #640202;
+    background-color: #272727;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -36,11 +44,16 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+
+
 
 }
 
 .tournamentCard.active {
     pointer-events: auto;
+    transform: translateY(-10px);
 }
 
 .cardImg {
@@ -54,19 +67,27 @@
 .tournamentTitle {
     font-size: 1.2rem;
     margin: 10px 0;
+
 }
 
 .gamesLink {
-    background-color: #252525;
+    background-color: #353535;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    border: 1px solid white;
+    transition: 0.5s;
+
+}
+.gamesLink:hover {
+    background-color: rgb(175, 137, 0);
 }
 
 .carouselBtn {
@@ -91,3 +112,21 @@
 }
 
 
+.title.database  {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
+    font-size: 1.75rem;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+    text-align: center;
+
+
+}
+
+.mainContainer {
+    border-radius: 10px;
+    border: 1px solid none;
+    margin-bottom: 5rem;
+}
