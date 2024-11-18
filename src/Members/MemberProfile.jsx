@@ -1,7 +1,7 @@
 import { doc, getDoc } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { db } from './database.jsx';
+import { db } from '../AdminComponents/database.jsx';
 import "./memberProfile.css";
 
 const MemberProfile = () => {

@@ -15,6 +15,7 @@ import Events from "./Events/events.jsx";
 import Footer from "./Footer/footer.jsx";
 import GamesDatabase from "./GamesDatabase/gamesDatabase.jsx";
 import HomeSlider from './HomeSlider/HomeSlider.jsx';
+import MemberProfile from './Members/MemberProfile.jsx';
 import Members from './Members/members.jsx'; // Import the Members component
 import Navbar from "./Navbar/navbar.jsx";
 import Resturants from "./Resturants/resturants.jsx";
@@ -113,6 +114,13 @@ function App() {
                         <Navbar />
                         <Empty />
                         <Members /> 
+                    </>
+                } />
+                <Route path="/members/:memberId" element={
+                    <>
+                        <Navbar />
+                        <Empty />
+                        <MemberProfile />
                     </>
                 } />
             </Routes>
