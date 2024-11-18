@@ -15,6 +15,7 @@ import Events from "./Events/events.jsx";
 import Footer from "./Footer/footer.jsx";
 import GamesDatabase from "./GamesDatabase/gamesDatabase.jsx";
 import HomeSlider from './HomeSlider/HomeSlider.jsx';
+import Members from './Members/members.jsx'; // Import the Members component
 import Navbar from "./Navbar/navbar.jsx";
 import Resturants from "./Resturants/resturants.jsx";
 
@@ -30,7 +31,6 @@ function App() {
                 setIsAuthenticated(true);
                 
                 // Here you can set isAdmin based on user role or other criteria
-                // For example, use a custom claim or check user role from the database
                 setIsAdmin(true); // Assuming all logged-in users are admins for this example
             } else {
                 setIsAuthenticated(false);
@@ -107,6 +107,13 @@ function App() {
                     ) : (
                         <Navigate to="/admin/login" replace />
                     )
+                } />
+                <Route path="/members" element={
+                    <>
+                        <Navbar />
+                        <Empty />
+                        <Members /> 
+                    </>
                 } />
             </Routes>
             <Footer />
