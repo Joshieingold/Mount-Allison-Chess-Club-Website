@@ -11,9 +11,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 800px;
+    perspective: 500px; /* Make this into 50px maybe on mobile.*/
     height: 90vh;
-    width: 80%;
+    width: 90vw;
 }
 
 #carousel {
@@ -25,8 +25,8 @@
 
 .tournamentCard {
     position: absolute;
-    width: 300px;
-    height: 400px;
+    width: 20vw;
+    height: 60vh;
     background-color: #640202;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
@@ -34,9 +34,9 @@
     transition: transform 0.5s ease, z-index 0.5s;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    border: 4px solid rgb(255, 255, 255);
+
 }
 
 .tournamentCard.active {
@@ -90,12 +90,4 @@
     right: 20px;
 }
 
-/* Gap between cards */
-.tournamentCard.inactive {
-    transform: translateX(calc((100% + 20px) * var(--index-offset))) rotateY(calc(var(--index-offset) * 10deg));
-}
 
-.tournamentCard.active {
-    transform: translateX(0) rotateY(0);
-    z-index: 1;
-}
