@@ -25,10 +25,14 @@ const MemberProfile = () => {
 
     return (
         <div className="memberProfileContainer">
-            <button onClick={() => navigate(-1)} className="backButton">Back</button>
+            <div className='smallNav'>
+                <button onClick={() => navigate(-1)} className="backButton">Back</button>
+                
+            </div>
             <div className="memberDetails">
+            <h1 className='memberName'>{member.name}</h1>
                 <img src={member.pictureUrl} alt={member.name} className="memberProfileImage" />
-                <h1>{member.name}</h1>
+                
                 <p>Club Rating: {member.rating}</p>
                 <p>CFC Rating: {member.cfcRating}</p>
                 <p>Rank: {member.rank}</p>
