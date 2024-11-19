@@ -4,7 +4,7 @@ const accommodations = [
     {
         name: "Coastal Inn",
         image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/443278023.jpg?k=4f41939b6f01003f1f4df912f0ef43ea54f6446ef79276fde515433d87f32232&o=&hp=1", // Replace with actual image path
-        description: "Affordable rates, quality rooms and easy booking process make us a favorite with travellers through out the Maritimes.",
+        description: "Affordable rates, quality rooms and easy booking process make us a favorite with travellers through out the Maritimes. :)",
         price: "$120 per night",
         location: "15 Wright St, Sackville, NB E4L 4P8",
         google: "https://coastalinns.com/sackville/"
