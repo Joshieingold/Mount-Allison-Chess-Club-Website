@@ -19,6 +19,7 @@ import MemberProfile from './Members/MemberProfile.jsx';
 import Members from './Members/members.jsx'; // Import the Members component
 import Navbar from "./Navbar/navbar.jsx";
 import Resturants from "./Resturants/resturants.jsx";
+import Accomodation from "./Accomodation/accom.jsx";
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -52,6 +53,7 @@ function App() {
                         <HomeSlider />
                         <Events />
                         <GamesDatabase />
+                        <Accomodation/>
                         <Resturants />
                     </>
                 } />
