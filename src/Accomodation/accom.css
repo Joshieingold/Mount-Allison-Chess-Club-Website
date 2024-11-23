@@ -1,127 +1,25 @@
-.accomodation {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 8px;
-    color: black;
-    width: 90vw;
-    height: 85vh;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15vh;
-}
-
-.accom-container {
-    display: flex;
-    width: 90vw;
-    align-content: center;
-
-}
-
-.sidebar {
-    width: 15%;
-    background-color: rgb(199, 18, 49);
-
-    padding: 1rem;
-    border-radius: 8px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.sidebar-item {
-    display: block;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
+.sectionTitle  {
     width: 100%;
-    text-align: left;
-    background-color: #f1f1f1;
     border: none;
-    color: black;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    font-weight: 600;
-}
-
-    .sidebar-item.active {
-        background-color: rgb(199, 187, 18);
-        color: white;
-        font-weight: 800;
-    }
-
-    .sidebar-item:hover {
-        background-color: rgb(199, 187, 18);
-        color: white;
-
-    }
-
-.info-section {
-    width: 85%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    height: 65vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    font-size: 1.75rem;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+    text-align: center;
+    background:red;
 
 }
-
-/* Diagonal overlay box */
-.overlay-box {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 1.5rem;
-    height: 100%;
-    width: 30%; /* Adjust width as needed */
-    position: relative;
-    border-radius: 8px;
-    z-index: 1; /* Ensures the overlay is above the background image */
-    margin-bottom: 1rem; /* Add some margin from the bottom */
-    align-content: center;
+.accomodation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgba(238, 238, 238, 0.541);
+        width: 90vw;
+        height:85vh;
+        background-image: url(https://fontawesome.com/social/chess-queen-alt?f=classic&s=&v=5);   
+        background-size: cover;
+        border-radius: 20px ;
+    
 }
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-.price {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.linkBtn {
-    background-color: rgba(255, 255, 255, 0.644);
-    color: black;
-    border: 2px solid black;
-}
-.linkBtn:hover {
-    background-color: rgb(199, 187, 18);
-    color: white;
-    border-color: rgb(199, 187, 18);
-    transition: 0.75s;
-}
-.sectionTitle {
-    background-color: rgb(199, 18, 49);
-    color: white;
-    height: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5rem;
-    box-shadow: 10px 10px black;
-    border: 2px solid white;
-    padding: 0.5rem;
-}
-/* Make sure the overlay box looks good on smaller screens */

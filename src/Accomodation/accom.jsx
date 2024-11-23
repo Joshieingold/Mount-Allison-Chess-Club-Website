@@ -57,11 +57,10 @@ const Accomodation = () => {
     const [selectedAccommodation, setSelectedAccommodation] = useState(accommodations[0]);
 
     return (
-        <section className="accomodation">
+        <div className="accomodation">
             <h1 className="sectionTitle">Accommodation</h1>
 
             <div className="accom-container">
-
                 <div className="sidebar">
                     {accommodations.map((accom, index) => (
                         <button
@@ -74,8 +73,6 @@ const Accomodation = () => {
                         </button>
                     ))}
                 </div>
-
-
                 <div
                     className="info-section"
                     style={{ backgroundImage: `url(${selectedAccommodation.image})` }}
@@ -90,7 +87,7 @@ const Accomodation = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
