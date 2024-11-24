@@ -53,7 +53,6 @@ function App() {
                         <HomeSlider />
                         <Events />
                         <GamesDatabase />
-                        <Accomodation/>
                         <Resturants />
                     </>
                 } />
