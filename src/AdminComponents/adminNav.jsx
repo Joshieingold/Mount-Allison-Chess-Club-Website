@@ -4,17 +4,17 @@ import logo from "../assets/mtachesslogo.png";
 import './adminNav.css';
 
 const AdminNav = ({ setIsAdmin }) => {
-    const navigate = useNavigate();
+    const navigate = useNavigate('/');
 
     const handleSignOut = () => {
         setIsAdmin(false);  
-        navigate('/');      
+        navigate;      
     };
 
     return (
         <nav className="adminNav">
             <div className="adminNav__logo">
-                <NavLink to="/">
+                <NavLink to="/" onClick={handleSignOut}>
                     <img src={logo} alt="Admin Logo" className='adminLogo'/>
                 </NavLink>
             </div>

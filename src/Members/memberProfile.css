@@ -1,24 +1,19 @@
+.memberProfileContainer {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
 .memberDetails {
-    background-color: black;
-    padding: 1rem;
-    width: 33%;
-
-
-    
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    height: 80%;
+    width: 80%;
 }
 .smallNav {
     display: flex;
-    color: black;
-
-    align-items: center;
-}
-
-.memberProfileContainer {
-    height: 85vh;
-    width: 90vw;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-
+    align-items: center;
 }
