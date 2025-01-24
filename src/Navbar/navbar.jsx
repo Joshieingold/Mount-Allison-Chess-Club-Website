@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/mtachesslogo.png";
 import "./navbar.css";
-
+{* REQUIRES X SCROLL AND I DONT WANT IT TO*}
 const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
     const [isInvisable, setIsInvisable] = useState(false);
