@@ -2,6 +2,8 @@ import { doc, getDoc } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db } from '../AdminComponents/database.jsx';
+import cfc from "../assets/cfcLogo.png";
+import logo from "../assets/mtachesslogo.png";
 import "./memberProfile.css";
 
 const MemberProfile = () => {
@@ -24,20 +26,31 @@ const MemberProfile = () => {
     }
 
     return (
-        <div className="memberProfileContainer">
-            <div className='smallNav'>
-                <button onClick={() => navigate(-1)} className="backButton">Back</button>
-                
+
+        <div className="MainContainer">
+            <div className="PlayerCard">
+                <h1 className='Text'>{member.name}</h1>
+                <div className='PictureContainer'>
+                    <img src={member.pictureUrl} alt={member.name} className="memberProfileImage" />
+                    {/*MEMBER RANK IMAGE */}
+                </div>
+
+                <div className='EloContainer'>
+                    <div className='OrgContainer'>
+                        <img className='OrgLogo' src={cfc}/>
+                        <p className='EloText'>{member.cfcRating}</p>
+                    </div>
+                    <div className='OrgContainer'>
+                        <img className='OrgLogo' src={logo}/>
+                        <p className='EloText'>{member.rating}</p>
+                    </div>
+                </div>
             </div>
-            <div className="memberDetails">
-            <h1 className='memberName'>{member.name}</h1>
-                <img src={member.pictureUrl} alt={member.name} className="memberProfileImage" />
-                
-                <p>Club Rating: {member.rating}</p>
-                <p>CFC Rating: {member.cfcRating}</p>
-                <p>Rank: {member.rank}</p>
-                <p>Joined Date: {new Date(member.joinedDate).toLocaleDateString()}</p>
-                {member.role !== "None" && <p>Role: {member.role}</p>}
+            <div className='StatsContainer'>
+                <h1>Stats</h1>
+            </div>
+            <div className='GamesDatabase'>
+                <h1>Games</h1>
             </div>
         </div>
     );
