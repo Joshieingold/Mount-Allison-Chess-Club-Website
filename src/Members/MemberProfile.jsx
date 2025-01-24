@@ -37,11 +37,15 @@ const MemberProfile = () => {
 
                 <div className='EloContainer'>
                     <div className='OrgContainer'>
-                        <img className='OrgLogo' src={cfc}/>
+                        <div className='LogoPictureContainer'>
+                            <img className='OrgLogo' src={cfc}/>
+                        </div>
                         <p className='EloText'>{member.cfcRating}</p>
                     </div>
                     <div className='OrgContainer'>
-                        <img className='OrgLogo' src={logo}/>
+                        <div className='LogoPictureContainer'>
+                            <img className='OrgLogo' src={logo}/>
+                        </div>
                         <p className='EloText'>{member.rating}</p>
                     </div>
                 </div>
