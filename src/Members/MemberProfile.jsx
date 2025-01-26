@@ -29,33 +29,33 @@ const MemberProfile = () => {
 
         <div className="MainContainer">
             <div className="PlayerCard">
-                <h1 className='Text'>{member.name}</h1>
+                
                 <div className='PictureContainer'>
                     <img src={member.pictureUrl} alt={member.name} className="memberProfileImage" />
                     {/*MEMBER RANK IMAGE */}
                 </div>
-
-                <div className='EloContainer'>
-                    <div className='OrgContainer'>
-                        <div className='LogoPictureContainer'>
-                            <img className='OrgLogo' src={cfc}/>
-                        </div>
-                        <p className='EloText'>{member.cfcRating}</p>
+                <div className='DetailContainer'>
+                    <div className='Name'>
+                        <h1 className='Text'>{member.name}</h1>
                     </div>
-                    <div className='OrgContainer'>
-                        <div className='LogoPictureContainer'>
-                            <img className='OrgLogo' src={logo}/>
+                    <div className='EloContainer'>
+                        <div className='OrgContainer'>
+                            <div className='LogoPictureContainer'>
+                                <img className='OrgLogo' src={cfc}/>
+                            </div>
+                            <p className='EloText'>{member.cfcRating}</p>
                         </div>
-                        <p className='EloText'>{member.rating}</p>
+                        <div className='OrgContainer'>
+                            <div className='LogoPictureContainer'>
+                                <img className='OrgLogo' src={logo}/>
+                            </div>
+                            <p className='EloText'>{member.rating}</p>
+                        </div>
                     </div>
                 </div>
+
             </div>
-            <div className='StatsContainer'>
-                <h1>Stats</h1>
-            </div>
-            <div className='GamesDatabase'>
-                <h1>Games</h1>
-            </div>
+            
         </div>
     );
 };
