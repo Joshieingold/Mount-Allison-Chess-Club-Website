@@ -3,8 +3,6 @@ import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { db } from '../AdminComponents/database.jsx'; // Adjust the import based on your Firebase config file path
 import "./HomeSlider.css";
-// Need to add a placeholder while the data is grabbed from database for the slider.
-// Your component
 const HomeSlider = () => {
     const [slides, setSlides] = useState([]); // Replace static slides with state
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,9 +36,19 @@ const HomeSlider = () => {
                 </div>
                 <button className="move prev" onClick={prevSlide}>❮</button>
                 <button className="move next" onClick={nextSlide}>❯</button>
+
             </div>
         ) : (
-            <p>Loading slides...</p> // Display while slides are loading
+            
+            <div className="home-slider">
+                <div className="slider-content">
+                    <h1>Loading Slides</h1>
+                    <p>Content will be loaded momentarily</p>
+                </div>
+                <button className="move prev" onClick={prevSlide}>❮</button>
+                <button className="move next" onClick={nextSlide}>❯</button>
+                
+            </div>
         )
     );
 };
