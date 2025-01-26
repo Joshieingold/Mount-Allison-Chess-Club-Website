@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
     background: rgba(238, 238, 238, 0.541);
-    width: 90vw;
-    height:85vh;
+    width: 80vw;
+    height:80vh;
     background-image: url(https://fontawesome.com/social/chess-queen-alt?f=classic&s=&v=5);   
     background-size: cover;
     border-radius: 20px ;
@@ -104,11 +104,11 @@
 }
 
 .leftBtn {
-    left: 20px;
+    left: 7%
 }
 
 .rightBtn {
-    right: 20px;
+    right: 5%;
 }
 
 

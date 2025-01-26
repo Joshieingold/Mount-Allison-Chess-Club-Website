@@ -8,6 +8,7 @@ const AdminNav = ({ setIsAdmin }) => {
 
     const handleSignOut = () => {
         setIsAdmin(false);  
+        setIsAuthenticated(false);
         navigate;      
     };
 
@@ -52,9 +53,9 @@ const AdminNav = ({ setIsAdmin }) => {
                     </NavLink>
                 </li>
                 <li>
-                    <button className="signOutButton" onClick={handleSignOut}>
+                    <NavLink className="signOutButton" onClick={handleSignOut}>
                         Sign Out
-                    </button>
+                    </NavLink>
                 </li>
             </ul>
         </nav>

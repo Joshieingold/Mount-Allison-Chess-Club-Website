@@ -18,8 +18,6 @@ import HomeSlider from './HomeSlider/HomeSlider.jsx';
 import MemberProfile from './Members/MemberProfile.jsx';
 import Members from './Members/members.jsx'; // Import the Members component
 import Navbar from "./Navbar/navbar.jsx";
-import Resturants from "./Resturants/resturants.jsx";
-import Accomodation from "./Accomodation/accom.jsx";
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -53,7 +51,6 @@ function App() {
                         <HomeSlider />
                         <Events />
                         <GamesDatabase />
-                        <Resturants />
                     </>
                 } />
                 <Route path="/calendar" element={
@@ -77,7 +74,7 @@ function App() {
                     <>
                         <Navbar />
                         <Empty />
-                        <Login setIsAdmin={setIsAdmin} />
+                        <Login setIsAdmin={setIsAdmin} setIsAuthenticated={setIsAuthenticated} />
                     </>
                 } />
                 <Route path="/admin/manage-slider" element={
