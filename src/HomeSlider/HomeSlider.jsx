@@ -3,7 +3,7 @@ import { collection, getDocs } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { db } from '../AdminComponents/database.jsx'; // Adjust the import based on your Firebase config file path
 import "./HomeSlider.css";
-
+// Need to add a placeholder while the data is grabbed from database for the slider.
 // Your component
 const HomeSlider = () => {
     const [slides, setSlides] = useState([]); // Replace static slides with state
