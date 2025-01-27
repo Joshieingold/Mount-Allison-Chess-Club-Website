@@ -2,14 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 65vh;
     width: 80vw;
     color: black;
     margin: 0 auto;
     border-radius: 8px;
     background-image: url("https://mta.ca/sites/default/files/2022-06/Banner-Campus.jpg");
     background-size: cover;
-    margin-bottom: 15vh;
+
 }
 .leftSide {
     display: table-row;

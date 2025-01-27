@@ -6,7 +6,7 @@ import { auth } from './AdminComponents/database.jsx';
 import EventManagement from './AdminComponents/eventManagement.jsx';
 import GamesManagement from './AdminComponents/gamesManagement.jsx';
 import Login from './AdminComponents/login.jsx';
-import PlayerManagement from './AdminComponents/playerManagement.jsx';
+import PlayerManagement from './AdminComponents/PlayerManagement.jsx';
 import SliderManagement from './AdminComponents/SliderManagement.jsx';
 import './App.css';
 import Calendar from './Calander/calendar.jsx'; // Ensure this path is correct
@@ -18,6 +18,7 @@ import HomeSlider from './HomeSlider/HomeSlider.jsx';
 import MemberProfile from './Members/MemberProfile.jsx';
 import Members from './Members/members.jsx'; // Import the Members component
 import Navbar from "./Navbar/navbar.jsx";
+import TournamentHeader from "./MtaOpen2025/Header.jsx"
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -121,6 +122,15 @@ function App() {
                         <MemberProfile />
                     </>
                 } />
+                <Route path="/mta-open-2025" element={
+                    <>
+                        <Navbar />
+                        <Empty />
+                        <TournamentHeader />
+                        
+                    </>
+                } />
+                
             </Routes>
             <Footer />
         </Router>
