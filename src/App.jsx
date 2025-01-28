@@ -18,7 +18,7 @@ import HomeSlider from './HomeSlider/HomeSlider.jsx';
 import MemberProfile from './Members/MemberProfile.jsx';
 import Members from './Members/members.jsx'; // Import the Members component
 import Navbar from "./Navbar/navbar.jsx";
-import TournamentHeader from "./MtaOpen2025/Header.jsx"
+import Rules from "./MtaOpen2025/Rules/rules.jsx"
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -126,7 +126,8 @@ function App() {
                     <>
                         <Navbar />
                         <Empty />
-                        <TournamentHeader />
+                        <Rules />
+                        
                         
                     </>
                 } />
