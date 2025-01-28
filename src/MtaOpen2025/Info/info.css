@@ -1,0 +1,36 @@
+.InfoMain {
+    background-color: rgb(136, 12, 33);
+    display: flex;
+    align-items: center;
+    justify-self:  center;
+    justify-content: space-between;
+    width: 80vw;
+    border-radius: 0.8rem;
+
+}
+.ImageContainer {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.ThisImage {
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 0.8rem ;
+    border-bottom-right-radius: 0.8rem;
+
+}
+.InfoTextContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}

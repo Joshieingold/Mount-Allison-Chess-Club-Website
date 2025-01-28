@@ -4,11 +4,12 @@ import "./rules.css";
 function Rules() {
   return (
     <div className='RulesMain'>
-        <h2 className='ContentTitle'>Rules:</h2>
-        <div className='SmallBubblesContainer'>
+        <h1 className='ContentTitle'>Rules:</h1>
+        <div className='SmallBubbleContainer'>
             <div className='SmallBubble'> Time Control: 45+10  </div>
             <div className='SmallBubble'> 5 Rounds Swiss </div>
             <div className='SmallBubble'> Date: March x - March y </div>
+            <div className='SmallBubble'> Entry Fee: 20$ + CFC Fee </div>
         </div>
         <div className='BigBubbleContainer'>
             <div className='BigBubble'>
@@ -33,7 +34,7 @@ function Rules() {
             </div>
             <div className='BigBubble'>
                 <div className='BubbleTitle'> Location: </div>
-                <div className='GoogleMap'>Placeholder for google map api</div>
+                GOOGLE API HERE
             </div>
         </div>
     </div>

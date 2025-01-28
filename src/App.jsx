@@ -19,6 +19,7 @@ import MemberProfile from './Members/MemberProfile.jsx';
 import Members from './Members/members.jsx'; // Import the Members component
 import Navbar from "./Navbar/navbar.jsx";
 import Rules from "./MtaOpen2025/Rules/rules.jsx"
+import Info from "./MtaOpen2025/Info/info.jsx"
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -126,7 +127,9 @@ function App() {
                     <>
                         <Navbar />
                         <Empty />
+                        <Info/>
                         <Rules />
+                        
                         
                         
                     </>
