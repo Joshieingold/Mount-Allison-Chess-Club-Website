@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import "./rules.css";
 function Rules() {
   return (
     <div className='RulesMain'>

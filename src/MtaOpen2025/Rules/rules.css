@@ -1,0 +1,48 @@
+.RulesMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    width: 60vw;
+    gap: 5rem;
+    justify-self: center;
+    
+}
+.ContentTitle {
+    color: black;
+}
+.SmallBubbleContainer {
+    width: 80vw;
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SmallBubble {
+    background-color: rgb(49, 34, 34);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 10rem;
+
+}
+.BigBubbleContainer {
+    width: 80vw;
+    height:10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.BigBubble {
+    background-color: rgb(49, 34, 34);
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    height: 10rem;
+    width: 20rem;
+    
+
+}
