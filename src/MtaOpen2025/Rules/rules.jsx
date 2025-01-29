@@ -1,5 +1,6 @@
 
 import React from 'react';
+import MapSection from "../Components/mapSection";
 import "./rules.css";
 function Rules() {
   return (
@@ -34,7 +35,8 @@ function Rules() {
             </div>
             <div className='BigBubble'>
                 <div className='BubbleTitle'> Location: </div>
-                GOOGLE API HERE
+                <p>York St, Sackville, NB E4L 1C9</p>
+                <MapSection className="map"/>
             </div>
         </div>
     </div>

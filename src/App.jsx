@@ -17,9 +17,10 @@ import GamesDatabase from "./GamesDatabase/gamesDatabase.jsx";
 import HomeSlider from './HomeSlider/HomeSlider.jsx';
 import MemberProfile from './Members/MemberProfile.jsx';
 import Members from './Members/members.jsx'; // Import the Members component
+import Info from "./MtaOpen2025/Info/info.jsx";
+import Prize from "./MtaOpen2025/Prizes/prizes.jsx";
+import Rules from "./MtaOpen2025/Rules/rules.jsx";
 import Navbar from "./Navbar/navbar.jsx";
-import Rules from "./MtaOpen2025/Rules/rules.jsx"
-import Info from "./MtaOpen2025/Info/info.jsx"
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -129,6 +130,7 @@ function App() {
                         <Empty />
                         <Info/>
                         <Rules />
+                        <Prize/>
                         
                         
                         
