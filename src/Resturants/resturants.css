@@ -74,10 +74,9 @@
 .resturantName {
     font-size: 1.25rem;
     margin-bottom: 5px;
-
 }
 .learnMoreButton:hover {
     background-color: rgb(199, 187, 18);
-    color:white ;
-    transition: 0.25s;
+    color:white;
+    transition: 0.55s;
 }
