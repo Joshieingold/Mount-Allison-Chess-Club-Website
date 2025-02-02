@@ -1,8 +1,7 @@
 import React from 'react';
-import RegisteredList from './RegisteredList/registeredList.jsx'; // Relative import
-import './registration.css'; // Ensure this CSS file exists
-import SignUpForm from './SignUp/signUp.jsx'; // Relative import
-
+import RegisteredList from './RegisteredList/registeredList.jsx'; // Adjust the relative path
+import './registration.css'; // Make sure this file is correctly imported
+import SignUpForm from './SignUp/signUp.jsx'; // Adjust the relative path
 
 const RegistrationPage = ({ isDarkMode }) => {
     return (

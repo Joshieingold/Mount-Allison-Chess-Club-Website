@@ -40,7 +40,7 @@ const registeredList = () => {
                         <th>Name</th>
                         <th>CFC ID</th>
                         <th>Rating</th>
-                        <th>Interest Level</th>
+                        <th>Interest</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -10,6 +10,7 @@ const SignUpForm = ({ isDarkMode }) => {
         cfcNumber: '',
         interestLevel: '',
         acceptedTerms: false,
+        tournamentFee: 20,
         otherInterest: '',
         competedBefore: '',
         rating: '',
@@ -56,7 +57,8 @@ const SignUpForm = ({ isDarkMode }) => {
                     rating: formData.rating,
                     paymentMethod: formData.paymentMethod,
                     acceptedTerms: formData.acceptedTerms,
-                    paymentRecieved: "Not Recieved",
+                    paymentReceived: false,
+                    tournamentFee: 20.00,
                     createdAt: new Date(),  // Timestamp for when the registration was created
                 });
 
