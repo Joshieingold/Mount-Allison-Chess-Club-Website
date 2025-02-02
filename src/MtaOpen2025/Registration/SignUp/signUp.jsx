@@ -11,6 +11,7 @@ const SignUpForm = ({ isDarkMode }) => {
         otherInterest: '',
         competedBefore: '',  // New field for whether they've competed in CFC tournament
         rating: '',  // Rating field if they've competed before
+        paymentMethod: '',  // New field for payment method
     });
 
     const [formErrors, setFormErrors] = useState({});
@@ -51,6 +52,7 @@ const SignUpForm = ({ isDarkMode }) => {
                 otherInterest: '',
                 competedBefore: '',
                 rating: '',
+                paymentMethod: '', // Reset payment method
             });
         } else {
             setFormErrors(errors);
@@ -149,7 +151,7 @@ const SignUpForm = ({ isDarkMode }) => {
                             onChange={handleChange}
                             className="radioField"
                         />
-                        <label htmlFor="competedYes">Yes</label>
+                        <label htmlFor="competedYes">Yes   </label>
                         <input
                             type="radio"
                             id="competedNo"
@@ -176,6 +178,43 @@ const SignUpForm = ({ isDarkMode }) => {
                             className="inputField"
                         />
                         {formErrors.rating && <p className="error">{formErrors.rating}</p>}
+                    </div>
+                )}
+
+                {/* Payment Method (appears only if 'Going' is selected) */}
+                {formData.interestLevel === 'going' && (
+                    <div className="formField">
+                        <label>Payment Method</label>
+                        <div>
+                            <input
+                                type="radio"
+                                id="cashInPerson"
+                                name="paymentMethod"
+                                value="cashInPerson"
+                                checked={formData.paymentMethod === 'cashInPerson'}
+                                onChange={handleChange}
+                                className="radioField"
+                            />
+                            <label htmlFor="cashInPerson">Cash in person   </label>
+
+                            <input
+                                type="radio"
+                                id="eTransfer"
+                                name="paymentMethod"
+                                value="eTransfer"
+                                checked={formData.paymentMethod === 'eTransfer'}
+                                onChange={handleChange}
+                                className="radioField"
+                            />
+                            <label htmlFor="eTransfer">E-Transfer</label>
+                        </div>
+
+                        {/* If E-Transfer is selected, show email */}
+                        {formData.paymentMethod === 'eTransfer' && (
+                            <div className="eTransferEmail">
+                                <p>Please send your payment to: <strong>payment@mta-chess.com</strong></p>
+                            </div>
+                        )}
                     </div>
                 )}
 

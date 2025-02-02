@@ -44,12 +44,6 @@ const TournNav = ({ toggleDarkMode, isDarkMode }) => {
                     <a className="facebook" href="https://www.facebook.com/groups/mtachess/?ref=share&mibextid=NSMWBT">
                         <img src="https://app.fide.com/upload/5/b7536cc9d09fed04bce5eff6fff07dbd.svg" alt="Facebook" className="icon" />
                     </a>
-                    <div className="darkModeToggle">
-                    <label className="switch">
-                        <input type="checkbox" checked={isDarkMode} onChange={toggleDarkMode} />
-                        <span className="slider round"></span>
-                    </label>
-                </div>
                 </div>
             </div>
             <div className={`navbar ${isSticky ? 'sticky' : ''}`}>
@@ -59,9 +53,16 @@ const TournNav = ({ toggleDarkMode, isDarkMode }) => {
                     <Link className="desktopMenuListItem" to="/prizes">Prizes</Link>
                     <Link className="desktopMenuListItem" to="/register">Register</Link>
                 </div>
-                {/* Dark Mode Toggle */}
-                
             </div>
+
+            {/* Dark Mode Button at the bottom right */}
+            <button 
+                className="darkModeButton" 
+                onClick={toggleDarkMode}
+                aria-label={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            >
+                {isDarkMode ? "🌞" : "🌙"}
+            </button>
         </div>
     );
 };

@@ -30,21 +30,28 @@
 }
 
 .radioField {
-    margin-right: 10px;
+    margin-right: 5px;
+
 }
 
+.termsLabel {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
 .checkbox {
-    margin-right: 8px;
+    margin-right: 10px;
 }
 
 .submitBtn {
     padding: 12px 20px;
-    background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    display: flex;
+    justify-self: center;
 }
 
 .submitBtn:hover {
@@ -59,8 +66,10 @@
 
 /* Light Mode */
 .light {
-    --bg-color: #fff;
-    --text-color: #000;
+    --bg-color: #ffffff;
+    color: #000000;
+    transition: 0.5s;
+    
 }
 
 .light .inputField,
@@ -76,6 +85,7 @@
 .dark {
     --bg-color: #333;
     --text-color: #fff;
+    transition: 0.5s;
 }
 
 .dark .inputField,
@@ -86,9 +96,13 @@
 }
 
 .dark .submitBtn {
-    background-color: #333;
+    background-color: #009708;
 }
 
 .dark .error {
     color: #ff6666;
+}
+.eTransferEmail {
+    display: flex;
+    margin-top: 5px;
 }

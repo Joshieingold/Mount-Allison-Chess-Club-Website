@@ -1,7 +1,7 @@
 /* Light Mode (default) */
 .wholeBar.light {
     background-color: #ffffff; /* White background for light mode */
-    color: #000000; /* Black text for light mode */
+
 }
 
 .topBar.light {
@@ -71,3 +71,30 @@ input:checked + .slider {
 input:checked + .slider:before {
     transform: translateX(14px);
 }
+/* Existing styles for the wholeBar, topBar, navbar, etc. */
+
+.darkModeButton {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right of the screen */
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 100;
+}
+
+.darkModeButton:hover {
+    background-color: #444;
+}
+
+.darkModeButton:focus {
+    outline: none;
+}
+
+/* You can further customize the appearance of the button if needed */

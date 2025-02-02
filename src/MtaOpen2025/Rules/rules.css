@@ -37,13 +37,15 @@
     text-align: center;
     width: 200px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
   }
   
   /* Big Bubble Container */
   .bigBubbleContainer {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
     gap: 30px;
   }
   
@@ -55,6 +57,10 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
   }
   
   .bubbleTitle {
@@ -112,28 +118,5 @@
     color: #333;
     margin-bottom: 10px;
   }
-  
-  /* Countdown Section */
-  .countdown {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .countdown h2 {
-    font-size: 2rem;
-    color: #9E2A2F;  /* Maroon for countdown section */
-    margin-bottom: 20px;
-  }
-  
-  .countdownTimer {
-    background-color: #F4A300;  /* Gold for countdown timer */
-    color: #fff;
-    padding: 20px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    border-radius: 8px;
-    display: inline-block;
-  }
+
   
