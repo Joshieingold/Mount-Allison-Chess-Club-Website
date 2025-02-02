@@ -1,66 +1,91 @@
-.InfoMain {
-    background-color: rgb(136, 12, 33);
-    display: flex;
-    align-items: center;
-    justify-self:  center;
-    justify-content: space-between;
-    width: 80vw;
-    border-radius: 0.8rem;
-    height: 60vh;
-
-}
-.ImageContainer {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
-}
-.ThisImage {
-    object-fit: cover;
+/* General Section Styling */
+.infoSection {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    background-image: url('https://macleans.ca/_next/image/?url=https%3A%2F%2Fcms.macleans.ca%2Fwp-content%2Fuploads%2F2024%2F10%2FUNI_RANKINGS_UNDERGRAD_FINAL_01-scaled.jpg&w=3840&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Overlay for text readability */
+  .infoContent {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border-top-right-radius: 0.8rem ;
-    border-bottom-right-radius: 0.8rem;
-
-}
-.InfoTextContainer {
-    width: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: top;
-    gap: 4vh;
-
-
-
-
-}
-.InfoTextParagraphContainer {
-    height: 90%;
-    width:100%;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    
-
-
-
-
-}
-.InfoTextHeader {
-
-    object-fit: scale-down;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    border-radius: 16px;
+  }
+  
+  /* Text Container */
+  .infoTextContainer {
     text-align: center;
-
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-.InfoTextContent {
-    text-align: center;
-    width: 80%;
-}
+    color: white;
+    padding: 0 20px;
+  }
+  
+  /* Header Styling */
+  .infoHeader {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #F7A800; /* Mount Allison Gold */
+    margin-bottom: 20px;
+    line-height: 1.3;
+    letter-spacing: 1px;
+  }
+  
+  /* Paragraph Text Styling */
+  .infoParagraphs {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .infoText {
+    margin-bottom: 25px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .infoSection {
+      height: 400px; /* Adjust height for smaller screens */
+    }
+  
+    .infoHeader {
+      font-size: 2.5rem;
+    }
+  
+    .infoParagraphs {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .infoSection {
+      height: 350px;
+    }
+  
+    .infoHeader {
+      font-size: 2rem;
+    }
+  
+    .infoParagraphs {
+      font-size: 1rem;
+    }
+  }
+  

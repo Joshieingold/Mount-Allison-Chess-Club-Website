@@ -1,0 +1,94 @@
+/* General Styles */
+.signUpFormContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.formField {
+    margin-bottom: 20px;
+}
+
+.inputField,
+.selectField {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.radioField {
+    margin-right: 10px;
+}
+
+.checkbox {
+    margin-right: 8px;
+}
+
+.submitBtn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submitBtn:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Light Mode */
+.light {
+    --bg-color: #fff;
+    --text-color: #000;
+}
+
+.light .inputField,
+.light .selectField {
+    background-color: #fff;
+}
+
+.light .submitBtn {
+    background-color: #4CAF50;
+}
+
+/* Dark Mode */
+.dark {
+    --bg-color: #333;
+    --text-color: #fff;
+}
+
+.dark .inputField,
+.dark .selectField {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #666;
+}
+
+.dark .submitBtn {
+    background-color: #333;
+}
+
+.dark .error {
+    color: #ff6666;
+}

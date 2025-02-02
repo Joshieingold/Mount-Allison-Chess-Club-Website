@@ -18,22 +18,22 @@ import HomeSlider from './HomeSlider/HomeSlider.jsx';
 import MemberProfile from './Members/MemberProfile.jsx';
 import Members from './Members/members.jsx'; // Import the Members component
 import Info from "./MtaOpen2025/Info/info.jsx";
+import TournNav from './MtaOpen2025/MtaOpen2025Nav/tournamentNav.jsx';
 import Prize from "./MtaOpen2025/Prizes/prizes.jsx";
+import SignUpForm from './MtaOpen2025/Registration/SignUp/signUp.jsx';
 import Rules from "./MtaOpen2025/Rules/rules.jsx";
 import Navbar from "./Navbar/navbar.jsx";
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);  // Dark mode state
 
     // Check authentication state
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
-                // Set authentication status based on user presence
                 setIsAuthenticated(true);
-                
-                // Here you can set isAdmin based on user role or other criteria
                 setIsAdmin(true); // Assuming all logged-in users are admins for this example
             } else {
                 setIsAuthenticated(false);
@@ -41,105 +41,110 @@ function App() {
             }
         });
 
-        return () => unsubscribe(); // Cleanup subscription on unmount
+        return () => unsubscribe();
     }, []);
 
+    // Toggle Dark Mode
+    const toggleDarkMode = () => {
+        setIsDarkMode(prevMode => !prevMode);
+    };
+
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={
-                    <>
-                        <Navbar />
-                        <Empty />
-                        <HomeSlider />
-                        <Events />
-                        <GamesDatabase />
-                    </>
-                } />
-                <Route path="/calendar" element={
-                    <>
-                        <Navbar />
-                        <Empty />
-                        <Calendar />
-                    </>
-                } />
-                <Route path="/admin" element={
-                    isAuthenticated && isAdmin ? (
+        <div className={isDarkMode ? 'dark' : 'light'}>
+            <Router>
+                <Routes>
+                    <Route path="/" element={
                         <>
-                            <AdminNav isAdmin={isAdmin}/>
-                            <PlayerManagement isAdmin={isAdmin} />
+                            <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                            <Empty />
+                            <HomeSlider />
+                            <Events />
+                            <GamesDatabase />
                         </>
-                    ) : (
-                        <Navigate to="/admin/login" replace />
-                    )
-                } />
-                <Route path="/admin/login" element={
-                    <>
-                        <Navbar />
-                        <Empty />
-                        <Login setIsAdmin={setIsAdmin} setIsAuthenticated={setIsAuthenticated} />
-                    </>
-                } />
-                <Route path="/admin/manage-slider" element={
-                    isAuthenticated && isAdmin ? (
+                    } />
+                    <Route path="/calendar" element={
                         <>
-                            <AdminNav isAdmin={isAdmin}/>
-                            <SliderManagement isAdmin={isAdmin} />
+                            <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                            <Empty />
+                            <Calendar />
                         </>
-                    ) : (
-                        <Navigate to="/admin/login" replace />
-                    )
-                } />
-                <Route path="/admin/manage-games-database" element={
-                    isAuthenticated && isAdmin ? (
+                    } />
+                    <Route path="/admin" element={
+                        isAuthenticated && isAdmin ? (
+                            <>
+                                <AdminNav isAdmin={isAdmin} />
+                                <PlayerManagement isAdmin={isAdmin} />
+                            </>
+                        ) : (
+                            <Navigate to="/admin/login" replace />
+                        )
+                    } />
+                    <Route path="/admin/login" element={
                         <>
-                            <AdminNav isAdmin={isAdmin}/>
-                            <GamesManagement isAdmin={isAdmin}/>
+                            <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                            <Empty />
+                            <Login setIsAdmin={setIsAdmin} setIsAuthenticated={setIsAuthenticated} />
                         </>
-                    ) : (
-                        <Navigate to="/admin/login" replace />
-                    )
-                } />
-                <Route path="/admin/manage-events" element={
-                    isAuthenticated && isAdmin ? (
+                    } />
+                    <Route path="/admin/manage-slider" element={
+                        isAuthenticated && isAdmin ? (
+                            <>
+                                <AdminNav isAdmin={isAdmin} />
+                                <SliderManagement isAdmin={isAdmin} />
+                            </>
+                        ) : (
+                            <Navigate to="/admin/login" replace />
+                        )
+                    } />
+                    <Route path="/admin/manage-games-database" element={
+                        isAuthenticated && isAdmin ? (
+                            <>
+                                <AdminNav isAdmin={isAdmin} />
+                                <GamesManagement isAdmin={isAdmin} />
+                            </>
+                        ) : (
+                            <Navigate to="/admin/login" replace />
+                        )
+                    } />
+                    <Route path="/admin/manage-events" element={
+                        isAuthenticated && isAdmin ? (
+                            <>
+                                <AdminNav isAdmin={isAdmin} />
+                                <EventManagement />
+                            </>
+                        ) : (
+                            <Navigate to="/admin/login" replace />
+                        )
+                    } />
+                    <Route path="/members" element={
                         <>
-                            <AdminNav isAdmin={isAdmin}/>
-                            <EventManagement/>
+                            <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                            <Empty />
+                            <Members />
                         </>
-                    ) : (
-                        <Navigate to="/admin/login" replace />
-                    )
-                } />
-                <Route path="/members" element={
-                    <>
-                        <Navbar />
-                        <Empty />
-                        <Members /> 
-                    </>
-                } />
-                <Route path="/members/:memberId" element={
-                    <>
-                        <Navbar />
-                        <Empty />
-                        <MemberProfile />
-                    </>
-                } />
-                <Route path="/mta-open-2025" element={
-                    <>
-                        <Navbar />
-                        <Empty />
-                        <Info/>
-                        <Rules />
-                        <Prize/>
-                        
-                        
-                        
-                    </>
-                } />
-                
-            </Routes>
+                    } />
+                    <Route path="/members/:memberId" element={
+                        <>
+                            <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                            <Empty />
+                            <MemberProfile />
+                        </>
+                    } />
+                    <Route path="/mta-open-2025" element={
+                        <>
+                            <TournNav toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
+                            <Empty />
+                            <Info />
+                            <Rules />
+                            <Prize />
+                            <SignUpForm isDarkMode={isDarkMode} />
+
+                        </>
+                    } />
+                </Routes>
+            </Router>
             <Footer />
-        </Router>
+        </div>
     );
 }
 

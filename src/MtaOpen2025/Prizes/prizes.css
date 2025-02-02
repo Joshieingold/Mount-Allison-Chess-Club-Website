@@ -1,75 +1,115 @@
-.PrizeMain {
-
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .prizeMain {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .prizeTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #9E2A2F;  /* Mount Allison Maroon */
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  
+  .prizeShowcaseContainer {
     display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allow the cards to stack on mobile */
+    margin-bottom: 40px;
+  }
+  
+  .prizeCard {
+    background-color: #F4A300;  /* Mount Allison Gold */
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    justify-self: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10vh;
-    height: 70vh;
-    width: 80vw;
-    color: black;
-    background-color:rgb(228, 228, 228);
-    margin-bottom: 10vh;
-    border-radius: 0.8rem;
-
-}
-.PrizeCard {
-    background-color: rgba(0, 0, 0, 0.932);
-    width: 15%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    transition: 0.2s;
-    border-radius: 0.8rem;
-    color: white;
-}
-.PrizeCard:hover {
+    overflow: hidden;
+  }
+  
+  .prizeCard:hover {
     transform: translateY(-10px);
-}
-.PrizeShowcaseContainer {
-    margin-top: 5vh;
-    width: 80vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-bottom: 5vh;
-    height: 40vh;
-}
-.SmallText {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 80%;
-    font-size: smaller;
-    background-color: rgba(0, 0, 0, 0.781);
-    color: white;
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
-}
-.prizePicture {
-    object-fit: scale-down;
-
-    width: 60%;
-    
-
-}
-.PrizeTitle {
-    background-color: rgb(136, 12, 33);
-    width: 100%;
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-    border-top-left-radius: 0.8rem;
-    border-top-right-radius: 0.8rem;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .prizeText {
     font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+  
+  .prizePicture {
+    width: 120px;
+    height: 120px;
+    margin: 20px 0;
+    object-fit: contain;
+  }
+  
+  .prizeMoney {
+    font-size: 1.5rem;
     font-weight: 600;
-}
+    color: #fff;
+  }
+  
+  .second {
+    background-color: #D1B233;  /* Light Gold for second place */
+  }
+  
+  .first {
+    background-color: #9E2A2F;  /* Maroon for first place */
+  }
+  
+  .third {
+    background-color: #C9B5C9;  /* Light Purple for third place */
+  }
+  
+  .smallText {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .prizeShowcaseContainer {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .prizeCard {
+      width: 80%;
+      max-width: 300px;
+      height: 300px;
+    }
+  
+    .prizeText {
+      font-size: 1.75rem;
+    }
+  
+    .prizeMoney {
+      font-size: 1.25rem;
+    }
+  }
+  
