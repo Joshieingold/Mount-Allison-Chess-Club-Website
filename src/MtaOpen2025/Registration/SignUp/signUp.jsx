@@ -1,4 +1,6 @@
+import { addDoc, collection } from 'firebase/firestore'; // Firebase Firestore functions
 import React, { useState } from 'react';
+import { db } from '../../../AdminComponents/database.jsx'; // Make sure this is the correct Firestore import
 import './signUp.css';
 
 const SignUpForm = ({ isDarkMode }) => {
@@ -9,9 +11,9 @@ const SignUpForm = ({ isDarkMode }) => {
         interestLevel: '',
         acceptedTerms: false,
         otherInterest: '',
-        competedBefore: '',  // New field for whether they've competed in CFC tournament
-        rating: '',  // Rating field if they've competed before
-        paymentMethod: '',  // New field for payment method
+        competedBefore: '',
+        rating: '',
+        paymentMethod: '',
     });
 
     const [formErrors, setFormErrors] = useState({});
@@ -24,7 +26,7 @@ const SignUpForm = ({ isDarkMode }) => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const errors = {};
@@ -42,18 +44,38 @@ const SignUpForm = ({ isDarkMode }) => {
         }
 
         if (Object.keys(errors).length === 0) {
-            alert('Form submitted successfully!');
-            setFormData({
-                name: '',
-                email: '',
-                cfcNumber: '',
-                interestLevel: '',
-                acceptedTerms: false,
-                otherInterest: '',
-                competedBefore: '',
-                rating: '',
-                paymentMethod: '', // Reset payment method
-            });
+            // Save the form data to Firestore
+            try {
+                const newDocRef = await addDoc(collection(db, 'tournamentRegistrations'), {
+                    name: formData.name,
+                    email: formData.email,
+                    cfcNumber: formData.cfcNumber,
+                    interestLevel: formData.interestLevel,
+                    otherInterest: formData.otherInterest,
+                    competedBefore: formData.competedBefore,
+                    rating: formData.rating,
+                    paymentMethod: formData.paymentMethod,
+                    acceptedTerms: formData.acceptedTerms,
+                    paymentRecieved: "Not Recieved",
+                    createdAt: new Date(),  // Timestamp for when the registration was created
+                });
+
+                alert('Thank You for signing up! We look forward to seeing you at the tournament!');
+                setFormData({
+                    name: '',
+                    email: '',
+                    cfcNumber: '',
+                    interestLevel: '',
+                    acceptedTerms: false,
+                    otherInterest: '',
+                    competedBefore: '',
+                    rating: '',
+                    paymentMethod: '',
+                });
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                alert('Error submitting the form. Please try again later.');
+            }
         } else {
             setFormErrors(errors);
         }
@@ -152,6 +174,7 @@ const SignUpForm = ({ isDarkMode }) => {
                             className="radioField"
                         />
                         <label htmlFor="competedYes">Yes   </label>
+
                         <input
                             type="radio"
                             id="competedNo"

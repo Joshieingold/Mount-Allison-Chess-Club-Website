@@ -1,0 +1,40 @@
+.registrationPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.formAndList {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Optional max width */
+}
+
+.signUpSection,
+.registeredListSection {
+    flex: 1; /* Makes both sections take equal space */
+    min-width: 0; /* Ensures they don't overflow */
+}
+
+.signUpSection {
+    margin-right: 20px;
+}
+
+.registeredListSection {
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .formAndList {
+        flex-direction: column; /* Stack components vertically on smaller screens */
+    }
+
+    .signUpSection,
+    .registeredListSection {
+        margin: 0; /* Remove margins on smaller screens */
+    }
+}

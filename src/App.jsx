@@ -20,7 +20,7 @@ import Members from './Members/members.jsx'; // Import the Members component
 import Info from "./MtaOpen2025/Info/info.jsx";
 import TournNav from './MtaOpen2025/MtaOpen2025Nav/tournamentNav.jsx';
 import Prize from "./MtaOpen2025/Prizes/prizes.jsx";
-import SignUpForm from './MtaOpen2025/Registration/SignUp/signUp.jsx';
+import RegistrationPage from './MtaOpen2025/Registration/registration.jsx';
 import Rules from "./MtaOpen2025/Rules/rules.jsx";
 import Navbar from "./Navbar/navbar.jsx";
 
@@ -137,7 +137,8 @@ function App() {
                             <Info />
                             <Rules />
                             <Prize />
-                            <SignUpForm isDarkMode={isDarkMode} />
+
+                            <RegistrationPage isDarkMode={isDarkMode}/>
 
                         </>
                     } />
