@@ -32,8 +32,8 @@ const Prize = ({ isDarkMode }) => {
 
       // Calculate prizes based on the total prize pool
       const firstPrize = (totalFees * 0.4).toFixed(2);
-      const secondPrize = (totalFees * 0.3).toFixed(2);
-      const thirdPrize = (totalFees * 0.2).toFixed(2);
+      const secondPrize = (totalFees * 0.25).toFixed(2);
+      const thirdPrize = (totalFees * 0.15).toFixed(2);
 
       setPrizes({
         first: firstPrize,
@@ -87,7 +87,7 @@ const Prize = ({ isDarkMode }) => {
         </div>
       </div>
       <p className='smallText'>
-        Prizes are estimated based on current registered players. 1st place will receive 40% of tournament fees, 2nd place will receive 30%, and 3rd place will receive 20%. The remaining 10% will go to the Mount Allison Chess club to support future events.
+        Prizes are estimated based on current registered players. 1st place will receive 40% of tournament fees, 2nd place will receive 25%, and 3rd place will receive 15%. The remaining 20% will go to the Mount Allison Chess club for CFC fees and to support future events.
       </p>
     </div>
   );
