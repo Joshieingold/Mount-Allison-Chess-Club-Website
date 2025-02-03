@@ -62,17 +62,27 @@ function Prize() {
       <div className='prizeShowcaseContainer'>
         <div className='prizeCard second'>
           <h2 className='prizeText second'>2nd</h2>
+          <div>
           <img className='prizePicture second' src={Second} alt="2nd Prize" />
+          </div>
+          
           <h3 className='prizeMoney second'>${prizes.second || ' '}</h3>
         </div>
         <div className='prizeCard first'>
           <h2 className='prizeText first'>1st</h2>
-          <img className='prizePicture first' src={First} alt="1st Prize" />
+          <div>
+            <img className='prizePicture first' src={First} alt="1st Prize" />
+          </div>
+          
           <h3 className='prizeMoney first'>${prizes.first || ' '}</h3>
         </div>
         <div className='prizeCard third'>
           <h2 className='prizeText third'>3rd</h2>
-          <img className='prizePicture third' src={Third} alt="3rd Prize" />
+          <div>
+            <img className='prizePicture third' src={Third} alt="3rd Prize" />
+          </div>
+
+          
           <h3 className='prizeMoney third'>${prizes.third || ' '}</h3>
         </div>
       </div>

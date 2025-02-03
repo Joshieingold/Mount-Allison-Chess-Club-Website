@@ -6,6 +6,7 @@
     justify-content: center; /* Creates space between form and list */
     align-items: flex-start; /* Align the items to the top */
     height: 100%; /* Take full height of the parent */
+    width: 90vw;
 }
 
 /* Form section */

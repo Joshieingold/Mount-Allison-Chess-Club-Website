@@ -66,8 +66,12 @@
 
 /* Light Mode */
 .light {
-    --bg-color: #ffffff;
-    color: #000000;
+    background-color: #F7F7F7;  /* Light gray background */
+
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    color:black;
     transition: 0.5s;
     
 }
