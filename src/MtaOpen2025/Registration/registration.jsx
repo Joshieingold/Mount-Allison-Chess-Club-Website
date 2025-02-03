@@ -6,6 +6,7 @@ import SignUpForm from './SignUp/signUp.jsx'; // Adjust the relative path
 const RegistrationPage = ({ isDarkMode }) => {
     return (
         <div className={`registrationPageContainer ${isDarkMode ? 'dark' : 'light'}`}>
+            <h1 className="RegisterTitle">Register</h1>
             <div className="formAndList">
                 <div className="signUpSection">
                     <SignUpForm isDarkMode={isDarkMode} />

@@ -6,6 +6,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px 0;
+    transition: 0.5s;
   }
   
   /* Title Styling */
@@ -16,6 +17,7 @@
     color: #9E2A2F;  /* Maroon for main heading */
     margin-bottom: 40px;
     text-transform: uppercase;
+    transition: 0.5s;
   }
   
   /* Overview Bubble Container */
@@ -40,6 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.5s;
   }
   
   /* Big Bubble Container */
@@ -60,7 +63,7 @@
     max-width: 500px;
     display: flex;
     flex-direction: column;
-
+    transition: 0.5s;
     align-items: center;
   }
   
@@ -69,6 +72,7 @@
     font-weight: bold;
     color: #9E2A2F;  /* Maroon for section titles */
     margin-bottom: 15px;
+    transition: 0.5s;
   }
   
   /* List Styling */
@@ -81,6 +85,7 @@
     font-size: 1.125rem;
     margin-bottom: 10px;
     color: #555;
+    transition: 0.5s;
   }
   
   /* Location Text */
@@ -88,6 +93,7 @@
     font-size: 1.125rem;
     color: #333;
     margin-bottom: 20px;
+    transition: 0.5s;
   }
   
   /* Additional Info Section */
@@ -120,4 +126,47 @@
     margin-bottom: 10px;
   }
 
-  
+  .dark {
+    --DarkBackground: #333;
+    --DarkContentBackground: #666;
+    --DarkText: #fff;
+    --DarkBubble: #444;
+    --DarkTitle: white;
+    --DarkHighLight: #ff6666;
+    --DarkBorder: 1px solid #666;
+    --DarkSubmit: #009708;
+    --DarkError: #ff6666;
+    transition: 0.5s;
+
+}
+
+.dark .rulesMain {
+  background-color: var(--DarkBackground);
+  transition: 0.5s;
+}
+.dark .overviewBubble {
+  background-color: var(--DarkBubble);
+  color: var(--DarkText);
+  transition: 0.5s;
+}
+.dark .bigBubble {
+  background-color: var(--DarkBubble);
+  color: var(--DarkText);
+  transition: 0.5s;
+}
+.dark .bubbleTitle {
+  color: var(--DarkTitle);
+  transition: 0.5s;
+}
+.dark .locationText {
+  color: var(--DarkText);
+  transition: 0.5s;
+}
+.dark li {
+  color: var(--DarkText);
+  transition: 0.5s;
+}
+.dark   .contentTitle {
+  color: var(--DarkText);
+  transition: 0.5s;
+}

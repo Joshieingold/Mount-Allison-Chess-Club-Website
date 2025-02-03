@@ -67,3 +67,17 @@
     background-color: var(--DarkBackground);
     transition: 0.5s;
 }
+.RegisterTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #9E2A2F;  /* Mount Allison Maroon */
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    transition: 0.5s;
+    text-align: center;
+    transition: 0.5s;
+}
+.dark .RegisterTitle {
+    color: var(--DarkText);
+    transition: 0.5s;
+}

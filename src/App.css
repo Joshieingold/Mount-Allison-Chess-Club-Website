@@ -19,6 +19,7 @@ html, body {
 body.dark {
   --primary-bg-color: #121212; /* Dark background color */
   --text-color: #ffffff; /* Light text color */
+ 
 }
 
 body.light {

@@ -54,3 +54,7 @@
 }
 
 /* You can further customize the appearance of the button if needed */
+.dark {
+    background-color: var(--DarkBackground);
+    transition: 0.8s;
+}

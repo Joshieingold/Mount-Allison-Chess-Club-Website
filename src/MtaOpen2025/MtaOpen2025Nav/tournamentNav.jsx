@@ -49,7 +49,7 @@ const TournNav = ({ toggleDarkMode, isDarkMode }) => {
             <div className={`navbar ${isSticky ? 'sticky' : ''}`}>
                 <div className="desktopMenu">
                     <Link className="desktopMenuListItem" to="/">Intro</Link>
-                    <Link className="desktopMenuListItem" to="/rules">Rules</Link>
+                    <Link className="desktopMenuListItem" to="/rules">Details</Link>
                     <Link className="desktopMenuListItem" to="/prizes">Prizes</Link>
                     <Link className="desktopMenuListItem" to="/register">Register</Link>
                 </div>

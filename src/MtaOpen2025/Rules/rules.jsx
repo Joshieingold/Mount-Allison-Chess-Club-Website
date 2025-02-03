@@ -2,9 +2,9 @@ import React from 'react';
 import MapSection from "../Components/mapSection";
 import "./rules.css";
 
-function Rules() {
+const Rules = ({ isDarkMode }) => {
   return (
-    <div className='rulesMain'>
+    <div className={`rulesMain ${isDarkMode ? 'dark' : 'light'}`}>
       <h1 className='contentTitle'>Tournament Details</h1>
 
       {/* Overview Section */}
@@ -49,16 +49,7 @@ function Rules() {
       </div>
 
       {/* Additional Info Section */}
-      <div className='additionalInfo'>
-        <div className='contactInfo'>
-          <h2>Contact Information</h2>
-          <p>If you have any questions about the tournament, please reach out:</p>
-          <ul>
-            <li>Email: chess@mountallison.ca</li>
-            <li>Phone: +1 (555) 123-4567</li>
-          </ul>
-        </div>
-      </div>
+      
     </div>
   );
 }
