@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { db } from '../../../AdminComponents/database.jsx'; // Ensure correct Firestore import
 import './registeredList.css';
 
-const registeredList = () => {
+const registeredList = ({ isDarkMode }) => {
     const [players, setPlayers] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -32,7 +32,7 @@ const registeredList = () => {
     }
 
     return (
-        <div className="registeredListContainer">
+        <div className={`registeredListContainer ${isDarkMode ? 'dark' : 'light'}`}>
             <h2 className="listTitle">Registered Players</h2>
             <table className="playersTable">
                 <thead>

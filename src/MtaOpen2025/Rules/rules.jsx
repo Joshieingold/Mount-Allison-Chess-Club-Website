@@ -5,7 +5,7 @@ import "./rules.css";
 function Rules() {
   return (
     <div className='rulesMain'>
-      <h1 className='contentTitle'>Tournament Rules</h1>
+      <h1 className='contentTitle'>Tournament Details</h1>
 
       {/* Overview Section */}
       <div className="overviewContainer">

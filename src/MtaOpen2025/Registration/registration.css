@@ -6,7 +6,8 @@
     justify-content: center; /* Creates space between form and list */
     align-items: flex-start; /* Align the items to the top */
     height: 100%; /* Take full height of the parent */
-    width: 90vw;
+    width: 100vw;
+    
 }
 
 /* Form section */
@@ -14,6 +15,7 @@
     flex: 1;
     max-width: 48%; /* Optional: to give space for the list */
     margin-right: 20px; /* Add some margin to separate the two */
+    
 }
 
 /* Registered list section */
@@ -21,6 +23,8 @@
     flex: 1;
     max-width: 48%; /* Optional: to ensure they take up equal space */
     overflow-y: auto; /* Allow scrolling if content is too large */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* Table styling for the Registered List */

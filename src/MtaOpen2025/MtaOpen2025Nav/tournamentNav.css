@@ -1,7 +1,7 @@
 /* Light Mode (default) */
 .wholeBar.light {
     background-color: #ffffff; /* White background for light mode */
-
+    color: #f0f0f0; /* Light text for dark mode */
 }
 
 .topBar.light {

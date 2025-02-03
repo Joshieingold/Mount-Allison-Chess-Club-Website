@@ -11,7 +11,7 @@ const RegistrationPage = ({ isDarkMode }) => {
                     <SignUpForm isDarkMode={isDarkMode} />
                 </div>
                 <div className="registeredListSection">
-                    <RegisteredList />
+                    <RegisteredList isDarkMode={isDarkMode}/>
                 </div>
             </div>
         </div>
