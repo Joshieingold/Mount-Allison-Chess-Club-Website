@@ -50,3 +50,20 @@
     height: 100%; /* Full viewport height */
     
 }
+.dark {
+    --DarkBackground: #333;
+    --DarkContentBackground: #666;
+    --DarkText: #fff;
+    --DarkBubble: #444;
+    --DarkTitle: white;
+    --DarkHighLight: #ff6666;
+    --DarkBorder: 1px solid #666;
+    --DarkSubmit: #009708;
+    --DarkError: #ff6666;
+    transition: 0.5s;
+
+}
+.dark .formAndList {
+    background-color: var(--DarkBackground);
+    transition: 0.5s;
+}

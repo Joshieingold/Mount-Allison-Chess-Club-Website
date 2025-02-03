@@ -4,9 +4,11 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: var(--bg-color);
+    background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    transition: 0.5s;
 }
 
 .formTitle {
@@ -14,6 +16,7 @@
     font-size: 24px;
     margin-bottom: 20px;
     color: #9E2A2F;
+    transition: 0.5s;
 }
 
 .formField {
@@ -27,11 +30,14 @@
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid #ccc;
-    background-color: #fff;
+    background-color: #f3f3f3;
+    color: black;
+    transition: 0.5s;
 }
 
 .radioField {
     margin-right: 5px;
+    
 
 }
 
@@ -53,6 +59,8 @@
     font-size: 16px;
     display: flex;
     justify-self: center;
+
+    transition: 0.5s;
 }
 
 .submitBtn:hover {
@@ -64,54 +72,52 @@
     font-size: 14px;
     margin-top: 5px;
 }
-
-/* Light Mode */
-.light {
-    background-color: #F7F7F7;  /* Light gray background */
-
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    color:black;
-    transition: 0.5s;
-    
+.eTransferEmail {
+    display: flex;
+    margin-top: 5px;
 }
 
-.light .inputField,
-.light .selectField {
-    background-color: #fff;
-    color: #000000;
-    border: 1px solid #666;
-}
 
-.light .submitBtn {
-    background-color: #4CAF50;
-}
+
 
 /* Dark Mode */
 .dark {
-    --bg-color: #333;
-    --text-color: #fff;
+    --DarkBackground: #333;
+    --DarkContentBackground: #666;
+    --DarkText: #fff;
+    --DarkBubble: #444;
+    --DarkTitle: white;
+    --DarkHighLight: #ff6666;
+    --DarkBorder: 1px solid #666;
+    --DarkSubmit: #009708;
+    --DarkError: #ff6666;
     transition: 0.5s;
+
 }
 
 .dark .inputField,
 .dark .selectField {
-    background-color: #444;
-    color: #fff;
-    border: 1px solid #666;
+    background-color: var(--DarkContentBackground);
+    color: var(--DarkText);
+    border: var(--DarkBorder);
+    transition: 0.5s;
 }
 
 .dark .submitBtn {
-    background-color: #009708;
+    background-color: var(--DarkSubmit);
+    transition: 0.5s;
 }
 .dark .formTitle {
-    color: white;
+    color: var(--DarkTitle);
+    transition: 0.5s;
 }
 .dark .error {
-    color: #ff6666;
+    color: var(--DarkError);
+    transition: 0.5s;
 }
-.eTransferEmail {
-    display: flex;
-    margin-top: 5px;
+
+.dark .signUpFormContainer {
+    background-color: var(--DarkBubble);
+    color: var(--DarkText);
+    transition: 0.5s;
 }

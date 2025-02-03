@@ -6,7 +6,7 @@ import Second from "../../assets/second.png";
 import Third from "../../assets/third.png";
 import "./prizes.css";
 
-function Prize() {
+const Prize = ({ isDarkMode }) => {
   const [totalPrizePool, setTotalPrizePool] = useState(0);
   const [numPlayers, setNumPlayers] = useState(0);
   const [prizes, setPrizes] = useState({ first: 0, second: 0, third: 0 });
@@ -57,7 +57,7 @@ function Prize() {
   }
 
   return (
-    <div className='prizeMain'>
+    <div className={`prizeMain ${isDarkMode ? 'dark' : 'light'}`}>
       <div className='prizeTitle'>Prizes</div>
       <div className='prizeShowcaseContainer'>
         <div className='prizeCard second'>

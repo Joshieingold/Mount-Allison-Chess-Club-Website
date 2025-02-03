@@ -10,9 +10,9 @@ function Rules() {
       {/* Overview Section */}
       <div className="overviewContainer">
         <div className='overviewBubble'> Time Control: 45+10 </div>
-        <div className='overviewBubble'> 5 Rounds Swiss </div>
-        <div className='overviewBubble'> Date: March x - March y </div>
-        <div className='overviewBubble'> Entry Fee: 20$ + CFC Fee </div>
+        <div className='overviewBubble'> Format: <br></br>5 Rounds Swiss </div>
+        <div className='overviewBubble'> Date:<br></br>March x - March y </div>
+        <div className='overviewBubble'> Entry Fee: <br></br> 20$ + CFC Fee </div>
       </div>
 
       {/* Big Info Section */}

@@ -4,25 +4,24 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
+    max-height: 100vh;
+    transition: 0.5s;
 
 }
 
-.light .listTitle {
+.listTitle {
     font-size: 24px;
     margin-bottom: 15px;
     color: #9E2A2F;
     text-align: center;
+    transition: 0.5s;
 }
-.dark .listTitle {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #ffffff;
-    text-align: center;
-}
+
 
 .playersTable {
     width: 100%;
     border-collapse: collapse;
+    color: black;
     
 
 }
@@ -31,55 +30,77 @@
 .playersTable td {
     padding: 10px;
     text-align: left;
-    border-bottom: 2px solid #ddd;
+    border: 1px solid #242424;
+    transition: 0.5s;
 }
 
 .playersTable th {
     background-color: #f2f2f2;
     font-weight: bold;
+    transition: 0.5s;
 }
-
+.playersTable tr {
+    transition: 0.5s;
+}
 .playersTable tr:hover {
     background-color: #f1f1f1;
-}
-.light {
-    background-color: #F7F7F7;  /* Light gray background */
-
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
-    color:black;
     transition: 0.5s;
-    
 }
 
-.light .playersTable td,
-.light .playersTable th {
-
-    text-align: left;
-    border: 1px solid #747474;
-}
 
 /* Dark Mode */
 .dark {
-    background-color:  #333;
-    --text-color: #fff;
+    --DarkBackground: #333;
+    --DarkContentBackground: #666;
+    --DarkText: #fff;
+    --DarkBubble: #444;
+    --DarkTitle: white;
+    --DarkHighLight: #ff6666;
+    --DarkBorder: 1px solid #666;
+    --DarkSubmit: #009708;
+    --DarkError: #ff6666;
+    --DarkTransition: 0.5s;
+
+}
+.dark .listTitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--DarkText);
+    text-align: center;
     transition: 0.5s;
 }
-
 .dark .playersTable th,
 .dark .selectField
  {
-    background-color: #444;
-    color: #fff;
-    border: 1px solid #797979;
+    background-color: var(--DarkContentBackground);
+    color: var(--DarkText);
+    border: var(--DarkBorder);
+    transition: 0.5s;
 }
 .dark .playersTable th {
-    background-color: #202020;
-    color: #fff;
-    border: 1px solid #d6d6d6;
+    background-color: var(--DarkBackground);
+    color: var(--DarkText);
+    border: var(--DarkBorder);
+    transition: 0.5s;
 }
 
 .dark .playersTable tr:hover {
-    background-color: #5e0000;
+    background-color: var(--DarkHighLight);
+    transition: var(--DarkTransition);
+    border: var(--DarkBorder);
+    transition: 0.5s;
+}
+.dark .playersTable tr {
+    background-color: var(--DarkContentBackground);
+    color: var(--DarkText);
+    border: var(--DarkBorder);
+    transition: 0.5s;
+}
+.dark .registeredListContainer {
+
+    background-color: var(--DarkBubble);
+    transition: 0.5s;
+    
+
+
 }
