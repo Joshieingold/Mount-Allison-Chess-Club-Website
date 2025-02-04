@@ -7,7 +7,9 @@
 .topBar.light {
     background-color: #f0f0f0; /* Light background for the topBar */
 }
-
+.wholeBar {
+    width: 100vw;
+}
 .navbar.light {
     background-color: #ffffff; /* White navbar for light mode */
 }
