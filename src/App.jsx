@@ -23,6 +23,8 @@ import Prize from "./MtaOpen2025/Prizes/prizes.jsx";
 import RegistrationPage from './MtaOpen2025/Registration/registration.jsx';
 import Rules from "./MtaOpen2025/Rules/rules.jsx";
 import Navbar from "./Navbar/navbar.jsx";
+import Hotels from './MtaOpen2025/Hotels/hotels.jsx';
+import Restaurants from './Resturants/resturants.jsx';
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -137,8 +139,10 @@ function App() {
                             <Info />
                             <Rules />
                             <Prize />
-
+                            
                             <RegistrationPage isDarkMode={isDarkMode}/>
+                            <Hotels />
+                            <Restaurants/>
 
                         </>
                     } />
