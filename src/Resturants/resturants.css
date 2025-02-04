@@ -2,13 +2,19 @@
 .restaurants-container {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
+    transition: 0.5s;
   }
   
   .title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #9E2A2F;  /* Mount Allison Maroon */
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    transition: 0.5s;
+    text-align: center;
+    transition: 0.5s;
   }
   
   /* Grid Layout */
@@ -35,6 +41,7 @@
     text-align: center;
     justify-content: space-between;
     height: 100%;
+    transition: 0.5s;
   }
   
   .restaurant-card:hover {
@@ -57,12 +64,14 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: 0.5s;
   }
   
   .restaurant-name {
     font-size: 20px;
     margin: 10px 0;
     color: #222;
+    transition: 0.5s;
   }
   
   .restaurant-rating {
@@ -73,7 +82,7 @@
   
   /* Button */
   .learn-more {
-    background: #d43f3f;
+    background: rgb(56, 56, 56);
     color: #fff;
     border: none;
     padding: 8px 12px;
@@ -87,4 +96,31 @@
   .learn-more:hover {
     background: #b72c2c;
   }
-  
+  .dark {
+    --DarkBackground: #333;
+    --DarkContentBackground: #666;
+    --DarkText: #fff;
+    --DarkBubble: #444;
+    --DarkTitle: white;
+    --DarkHighLight: #ff6666;
+    --DarkBorder: 1px solid #666;
+    --DarkSubmit: #009708;
+    --DarkError: #ff6666;
+    transition: 0.5s;
+
+}
+.dark .title {
+    color: var(--DarkText);
+    transition: 0.5s;
+}
+.dark .restaurants-container {
+    background-color: var(--DarkBackground);
+    transition: 0.5s;
+}
+.dark .restaurant-card {
+    background-color: var(--DarkBubble);
+    transition: 0.5s;
+}
+.dark  .restaurant-name {
+    color: var(--DarkText);
+}
