@@ -50,6 +50,7 @@ const Navbar = () => {
                     <Link className="desktopMenuListItem" to="/calendar">Events</Link>
                     <Link className="desktopMenuListItem" to="/members">Members</Link>
                     <Link className="desktopMenuListItem" to="/admin/login">Staff</Link>
+                    <Link className="desktopMenuListItem" to="/mta-open-2025">MTA Open 2025</Link>
                 </div>
             </div>
         </div>
