@@ -6,70 +6,73 @@
     justify-content: center;
     background: rgba(238, 238, 238, 0.541);
     width: 80vw;
-    height:65vh;
-    background-image: url(https://fontawesome.com/social/chess-queen-alt?f=classic&s=&v=5);   
+    height: 65vh;
+    background-image: url(https://fontawesome.com/social/chess-queen-alt?f=classic&s=&v=5);
     background-size: cover;
-    border-radius: 20px ;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
+/* Carousel container */
 .carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+/* Carousel content wrapper */
+#carousel {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 500px; /* Make this into 50px maybe on mobile.*/
-    height: 90vh;
-    width: 90vw;
-    
-}
-
-#carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transform-style: preserve-3d;
-    
+    width: 100%;
+    height: 100%;
 }
 
+/* Tournament card */
 .tournamentCard {
-    position: absolute;
-    width: 15vw;
+    position: absolute; /* Use absolute positioning for each card */
+    width: 15vw; /* Original width */
     height: 50vh;
     background-color: #272727;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     text-align: center;
-    transition: transform 0.5s ease, z-index 0.5s;
+    transition: transform 0.5s ease, z-index 0.5s, opacity 0.5s;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
     padding: 1rem;
-
-
-
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
+/* Active state for the tournament card */
 .tournamentCard.active {
     pointer-events: auto;
-    transform: translateY(-10px);
+    transform: translateY(-15px); /* Small lift for active card */
+    z-index: 5; /* Bring active card to the front */
+    opacity: 1;
 }
 
-.cardImg {
-    width: 100%;
-    height: 60%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-fit: scale-down;
-}
-
-.tournamentTitle {
-    font-size: 1.2rem;
-    margin: 10px 0;
+/* Inactive state (non-selected cards) */
+.tournamentCard.inactive {
+    transform: translateY(0px); /* Keep inactive cards level */
+    z-index: 0;
+    opacity: 1;
 
 }
 
+/* Games link button */
 .gamesLink {
     background-color: #353535;
     color: #fff;
@@ -84,12 +87,13 @@
     text-align: center;
     border: 1px solid white;
     transition: 0.5s;
-
 }
+
 .gamesLink:hover {
     background-color: rgb(175, 137, 0);
 }
 
+/* Carousel buttons */
 .carouselBtn {
     background: none;
     border: none;
@@ -100,39 +104,55 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    
 }
 
 .leftBtn {
-    left: 7%
+    left: 7%;
 }
 
 .rightBtn {
     right: 5%;
 }
 
-
-.title.database  {
+/* Title styling for the database */
+.title.database {
     width: 100%;
     height: 10%;
     border: none;
     box-shadow: none;
     border-radius: 0px;
     font-size: 1.75rem;
-    border-top-left-radius: 10px ;
-    border-top-right-radius: 10px ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     text-align: center;
     background-color: rgb(199, 18, 49);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-
-
 }
 
+/* Main container for the database */
 .mainContainer {
     border-radius: 10px;
-    border: 1px solid none;
     margin-bottom: 5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100vw;
+        height: 70vh;
+        justify-content: center;
+        gap: 0.5vw;
+    }
+
+    .tournamentCard {
+        width: 70vw;
+        height: 40vh;
+    }
+
+    .title.database {
+        font-size: 1.5rem;
+    }
 }

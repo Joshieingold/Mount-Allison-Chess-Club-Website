@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-top: 3rem;
 
     transition: background-image 0.5s ease-in-out;
     z-index: 0;

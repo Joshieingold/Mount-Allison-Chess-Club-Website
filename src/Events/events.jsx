@@ -51,7 +51,7 @@ const Events = () => {
             <div className="rightSide">
                 {events.map((event, index) => (
                     <div className="eventContainer" key={event.id}>
-                        <h3 className={`dateText ${["first", "second", "third"][index]}`}>
+                        <h3 className={`dateText ${["firstEvent", "secondEvent", "thirdEvent"][index]}`}>
                             {formatEventDate(event.date)}
                         </h3>
                         <div className="eventDescriptionContainer">

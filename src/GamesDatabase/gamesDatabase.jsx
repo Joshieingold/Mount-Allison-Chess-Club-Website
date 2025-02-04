@@ -5,7 +5,7 @@ import "./gamesDatabase.css";
 
 const GamesDatabase = () => {
     const [games, setGames] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(0); // Default to 0 for first card
 
     useEffect(() => {
         const fetchGames = async () => {
@@ -38,37 +38,33 @@ const GamesDatabase = () => {
 
     return (
         <div className="mainContainer">
-        <div className="mainContainerDatabase" id="GamesDatabase">
-                    <h1 className="title database">Club Database</h1>
-                    <div className="carousel">
-                        <button className="carouselBtn leftBtn" onClick={prevCard}>‹</button>
-                        <main id="carousel">
-                            {games.map((game, index) => (
-                                <div
+            <div className="mainContainerDatabase" id="GamesDatabase">
+                <h1 className="title database">Club Database</h1>
+                <div className="carousel">
+                    <button className="carouselBtn leftBtn" onClick={prevCard}>‹</button>
+                    <main id="carousel">
+                        {games.map((game, index) => (
+                            <div
                                 key={game.id}
                                 className={`tournamentCard ${index === currentIndex ? "active" : "inactive"}`}
                                 style={{
-                                    transform: `
-                                        rotateY(calc(10deg * (${index - currentIndex}))) 
-                                        translateX(calc(300px * (${index - currentIndex})))
-                                        ${index === currentIndex ? "translateY(-15px)" : ""}`,
+                                    transform: `rotateY(calc(10deg * (${index - currentIndex}))) translateX(calc(300px * (${index - currentIndex})))`,
                                     zIndex: index === currentIndex ? 1 : 0,
+                                    opacity: index === currentIndex ? 1 : 0.5, // Make inactive cards less visible
                                 }}
                             >
-                                    <img src={game.imageUrl} className="cardImg" alt={game.title} />
-                                    <h3 className="tournamentTitle">{game.title}</h3>
-                                    <a href={game.link} target="_blank" rel="noopener noreferrer">
-                                        <button className="gamesLink">View Games</button>
-                                    </a>
-                                </div>
-                            ))}
-                        </main>
-                        <button className="carouselBtn rightBtn" onClick={nextCard}>›</button>
-                    </div>
+                                <img src={game.imageUrl} className="cardImg" alt={game.title} />
+                                <h3 className="tournamentTitle">{game.title}</h3>
+                                <a href={game.link} target="_blank" rel="noopener noreferrer">
+                                    <button className="gamesLink">View Games</button>
+                                </a>
+                            </div>
+                        ))}
+                    </main>
+                    <button className="carouselBtn rightBtn" onClick={nextCard}>›</button>
                 </div>
-
+            </div>
         </div>
-        
     );
 };
 
