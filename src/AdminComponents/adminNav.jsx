@@ -53,7 +53,7 @@ const AdminNav = ({ setIsAdmin }) => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink className="signOutButton" onClick={handleSignOut}>
+                    <NavLink className="signOutButton" onClick={handleSignOut} to="/">
                         Sign Out
                     </NavLink>
                 </li>
