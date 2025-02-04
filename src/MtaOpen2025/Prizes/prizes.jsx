@@ -58,7 +58,7 @@ const Prize = ({ isDarkMode }) => {
 
   return (
     <div className={`prizeMain ${isDarkMode ? 'dark' : 'light'}`}>
-      <div className='prizeTitle'>Prizes</div>
+      <div className='prizeTitle'>Current Prize Pool</div>
       <div className='prizeShowcaseContainer'>
         <div className='prizeCard second'>
           <h2 className='prizeText second'>2nd</h2>

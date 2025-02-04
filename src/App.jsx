@@ -25,6 +25,7 @@ import Rules from "./MtaOpen2025/Rules/rules.jsx";
 import Navbar from "./Navbar/navbar.jsx";
 import Hotels from './MtaOpen2025/Hotels/hotels.jsx';
 import Restaurants from './Resturants/resturants.jsx';
+import ContactInformation from './MtaOpen2025/ContactUs/contact.jsx';
 
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -142,6 +143,7 @@ function App() {
                             <RegistrationPage isDarkMode={isDarkMode} />  {/* Sign-up section */}
                             <Hotels />             {/* Accommodation options */}
                             <Restaurants />        {/* Dining options */}
+                            <ContactInformation/>
                         </>
                     } />
 
