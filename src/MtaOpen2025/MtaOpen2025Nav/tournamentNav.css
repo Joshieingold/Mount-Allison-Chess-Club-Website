@@ -4,11 +4,13 @@
     color: #f0f0f0; /* Light text for dark mode */
 }
 
-.topBar.light {
+.topBar {
     background-color: #f0f0f0; /* Light background for the topBar */
+    z-index: 1000000;
 }
 .wholeBar {
     width: 100vw;
+    
 }
 .navbar.light {
     background-color: #ffffff; /* White navbar for light mode */

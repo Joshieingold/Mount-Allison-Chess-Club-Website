@@ -4,6 +4,11 @@
     padding: 40px 20px;
     background-color: #ffffff;
     transition: 0.5s;
+    width: 70vw;
+    justify-self: center;
+    margin-top: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
   }
   
   .title {

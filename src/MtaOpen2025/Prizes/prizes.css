@@ -9,13 +9,14 @@
 
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    background-color: #F7F7F7;  /* Light gray background */
+    background-color: #ffffff;  /* Light gray background */
     padding: 60px 20px;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px 0;
     transition: 0.5s;
-    width: 100vw;
+    width: 70vw;
+    justify-self: center;
  
   }
   
@@ -83,17 +84,17 @@
   }
   
   .second {
-    background-color: #D1B233;  /* Light Gold for second place */
+    background-color: #df5555;  /* Light Gold for second place */
     transition: 0.5s;
   }
   
   .first {
-    background-color: #9E2A2F;  /* Maroon for first place */
+    background-color: #df5555;  /* Maroon for first place */
     transition: 0.5s;
   }
   
   .third {
-    background-color: #4a3cca;  /* Light Purple for third place */
+    background-color: #df5555;  /* Light Purple for third place */
     transition: 0.5s;
   }
   
