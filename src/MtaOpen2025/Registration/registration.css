@@ -3,7 +3,7 @@
 /* The flex container for both the form and the list */
 .formAndList {
     display: flex;
-    justify-content: center; /* Creates space between form and list */
+    justify-content: space-evenly; /* Creates space between form and list */
     align-items: flex-start; /* Align the items to the top */
     height: 100%; /* Take full height of the parent */
     width: 100vw;
@@ -13,7 +13,7 @@
 /* Form section */
 .signUpSection {
     flex: 1;
-    max-width: 48%; /* Optional: to give space for the list */
+    max-width: 40%; /* Optional: to give space for the list */
     margin-right: 20px; /* Add some margin to separate the two */
     
 }
@@ -21,10 +21,11 @@
 /* Registered list section */
 .registeredListSection {
     flex: 1;
-    max-width: 48%; /* Optional: to ensure they take up equal space */
+    max-width: 40%; /* Optional: to ensure they take up equal space */
     overflow-y: auto; /* Allow scrolling if content is too large */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+
 }
 
 /* Table styling for the Registered List */
