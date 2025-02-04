@@ -135,17 +135,16 @@ function App() {
                     <Route path="/mta-open-2025" element={
                         <>
                             <TournNav toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-                            <Empty />
-                            <Info />
-                            <Rules />
-                            <Prize />
-                            
-                            <RegistrationPage isDarkMode={isDarkMode}/>
-                            <Hotels />
-                            <Restaurants/>
-
+                            <Empty/>               {/* For Spacing of the NavBar */}
+                            <Info />               {/* General tournament details */}
+                            <Rules />              {/* Official rules */}
+                            <Prize />              {/* Prize distribution */}
+                            <RegistrationPage isDarkMode={isDarkMode} />  {/* Sign-up section */}
+                            <Hotels />             {/* Accommodation options */}
+                            <Restaurants />        {/* Dining options */}
                         </>
                     } />
+
                 </Routes>
             </Router>
             <Footer />
