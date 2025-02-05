@@ -51,7 +51,7 @@
 .eventCard:hover {
     background-color: #751111;
 }
-
+/* Event card remains red when selected */
 .eventCard.selected {
     background-color: rgb(121, 0, 0); 
     color: white; 
