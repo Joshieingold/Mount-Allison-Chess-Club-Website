@@ -4,9 +4,11 @@ import logo from "../assets/mtachesslogo.png";
 import "./navbar.css";
 
 const Navbar = () => {
+    // Global Variable Initialization
     const [isSticky, setIsSticky] = useState(false);
     const [isInvisable, setIsInvisable] = useState(false);
-
+    
+    // Measures when the user is scrolling, this way the Navbar will collapse or expand based on the users position.
     const handleScroll = () => {
         const topBarHeight = document.querySelector('.topBar').offsetHeight;
         if (window.scrollY > topBarHeight) {
@@ -17,18 +19,20 @@ const Navbar = () => {
             setIsInvisable(false);
         }
     };
-
-    const reloadPage = () => {
-        window.scrollTo(0, 0);
-        window.location.reload();
-    };
-
+    // Initialize scroll
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    
+    // Returns to the top of the page and then reloads the window.
+    const reloadPage = () => {
+        window.scrollTo(0, 0); 
+        window.location.reload();
+    };
+
 
     return (
         <div className="wholeBar">
