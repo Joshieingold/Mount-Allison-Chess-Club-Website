@@ -33,7 +33,7 @@ const Navbar = () => {
         window.location.reload();
     };
 
-
+    // HTML // 
     return (
         <div className="wholeBar">
             <div className={`topBar ${isInvisable ? 'hidden' : ''}`}>
