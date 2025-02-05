@@ -1,5 +1,6 @@
+/* Main Styling */
 
-
+/* Main Navbar container */
 .navbar {
     display: flex;
     width: 100vw;
@@ -13,6 +14,8 @@
     margin-bottom: 3vh;
     z-index: 5;
 }
+
+/* The red Title card that gets minimized on scroll */
 .topBar {
     background-color: rgb(136, 12, 33);
     display: flex;
@@ -21,9 +24,10 @@
     height: 15vh;
     position: fixed;
     width: 100vw;
-    transition: opacity 0.2s ease; /* Add transition for smoothness */
+    transition: opacity 0.2s ease;
 }
 
+/* Container for the logo and gives it click events */
 .logoButton {
     background-color: transparent;
     display: flex;
@@ -33,39 +37,55 @@
     height: 8vh;
     width: 15%;
 }
+
+/* Styling of the actual Logo image */
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 70%;
-    background-color: transparent; /* Ensure the background is transparent */
+    background-color: transparent; 
     transition: box-shadow 0.3s ease;
-
 }
 
+/* Main Container for the navigation links */
 .desktopMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 50%;
 }
+
+/* Navigation Links */
 .desktopMenuListItem {
     display: flex;
     justify-content: space-around;
     color: white;
     cursor: pointer;
 }
-.Contactbtn {
-    width: 10%;
-}
 
+/* Container for the Social Media icons */
 .socialContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    
 }
+
+/* The Social Media Icons */
+.icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* EVENTS */
+
+/* Attribute given to the topbar when the user has scrolled past the introduction */
+.hidden {
+    opacity: 0; /* Top bar becomes invisable */
+    pointer-events: none; /* Top bar cannot be inteacted with */
+}
+
 .sticky {
     position: fixed;
     top: 0; /* Stick to the top of the viewport */
@@ -75,20 +95,12 @@
     height: 5vh;
     transition: 0.5s;
 }
-.hidden {
-    opacity: 0; /* Make the top bar invisible */
-    pointer-events: none; /* Prevent interaction when hidden */
 
-}
 .logo:hover {
-
-    cursor: pointer;
-
+    cursor: pointer; 
 }
+
+/* The Header of the Navbar */
 .clubTitle {
     cursor:default;
-}
-.icon {
-    width: 2rem;
-    height: 2rem;
 }
