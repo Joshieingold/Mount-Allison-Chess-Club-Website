@@ -26,7 +26,7 @@ import Navbar from "./Navbar/navbar.jsx";
 import Hotels from './MtaOpen2025/Hotels/hotels.jsx';
 import Restaurants from './Resturants/resturants.jsx';
 import ContactInformation from './MtaOpen2025/ContactUs/contact.jsx';
-
+// I think im actually going to remake all of this in cleaner html/css.......
 function App() {
     const [isAdmin, setIsAdmin] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
